@@ -1,0 +1,40 @@
+{
+  "greetings": {
+    "en": "Hello!",
+    "ru": "Привет!"
+  },
+  "selectLanguage": {
+    "en": "Select a language:",
+    "ru": "Выберите язык:"
+  },
+  "help": {
+    "en": "/start - to restart the bot\n/help - to output help\n/info - information about the bot\n/lang - change the language\n/history - to view the history of your requests",
+    "ru": "/start - для перезапуска бота\n/help - для вывода справки\n/info - информация о боте\n/lang - смена языка\n/history - история запросов"
+  },
+  "languagesButtons": {
+    "en": "English",
+    "ru": "Русский"
+  },
+  "info": {
+    "en": "I'm image to text recognition bot. Send me one or more pictures to edit. Plese, send no more than 3 photos in 3 minutes. After sending the message, wait, I will process the image and send the text. You can choose and change the language of interface. The language of image text will ne definded automatically. To view help press /help.",
+    "ru": "Я бот, распознающий текст на изображениях. Отправь мне одно или несколько фото, чтобы я обработал их. Пожалуйста, отправляйте не более 3 изображений за 3 минуты. После отправки сообщения подождите, я обработаю изображение и пришлю текст. Вы можете выбрать и сменить язык интерфейса. Язык текста на изображении определяется автоматически. Чтобы просмотреть справку, нажмите /help."
+  },
+  "hint": {
+    "en": "Send a photo",
+    "ru": "Отправьте изображение"
+  },
+  "Error": {
+    "noPhoto": {
+      "en": "No photo. Try again.",
+      "ru": "Изображение не получено. Попробуйте еще раз."
+    },
+    "tooManyPhotos": {
+      "en": "Too many photos. Send no more than 3 photos in 3 minutes.",
+      "ru": "Слишком много изображений. Отправьте не более 3 фото за 3 минуты."
+    },
+    "emptyHistory": {
+      "en": "Your history is empty.",
+      "ru": "Ваша история пуста."
+    }
+  }
+}

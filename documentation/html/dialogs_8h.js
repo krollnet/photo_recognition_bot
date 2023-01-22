@@ -1,0 +1,28 @@
+var dialogs_8h =
+[
+    [ "dialogErrorEmptyHistory", "dialogs_8h.html#a60709d434b7d5534c1ab08ecffbd7661", null ],
+    [ "dialogErrorNoPhoto", "dialogs_8h.html#ac5d0a556a84f6f0fdd486463c35155b5", null ],
+    [ "dialogErrorTooManyPhotos", "dialogs_8h.html#a587d6340f84849a7cb09cace3f97cc44", null ],
+    [ "dialogGreeting", "dialogs_8h.html#a559f5a14ccb81f21075b5b7294bcfd1c", null ],
+    [ "dialogHelp", "dialogs_8h.html#aae6622f674c2934dd48b08328391a3c3", null ],
+    [ "dialogHint", "dialogs_8h.html#a87607e98dcf23cff0bed92b7efe39465", null ],
+    [ "dialogInfo", "dialogs_8h.html#a475efb530cfaab87a4718869cca8639e", null ],
+    [ "dialogLanguagesButtons", "dialogs_8h.html#abccf0729d4972f706dce48b73d3b2b6a", null ],
+    [ "dialogSelectLanguage", "dialogs_8h.html#add8ec8cb6a7fbfb070fe37ea991a8a0d", null ],
+    [ "getDialog", "dialogs_8h.html#aa61017178f7b6622a86a4889335ff700", null ],
+    [ "initialDialogs", "dialogs_8h.html#ae0dd2973b142354c451f4179e13600ea", null ],
+    [ "selectLanguage", "dialogs_8h.html#aceddf3376fac8a9ad9c1e7f72be6d818", null ],
+    [ "baseLanguage", "dialogs_8h.html#aa1eb88d5cfcf1fd4b58ea598da26066e", null ],
+    [ "dialogsJson", "dialogs_8h.html#a88d645ff6939dcc1322d5bc71cc94c50", null ],
+    [ "ERROR_BLOCK", "dialogs_8h.html#abe498a0af564a6f2a59e103a8c83c705", null ],
+    [ "ERROR_EMPTY_HISTORY", "dialogs_8h.html#a59ed8a96a214e058b876a1191ba55b87", null ],
+    [ "ERROR_N0_PHOTO", "dialogs_8h.html#a94b77dbf703c2b2de8d862152039c378", null ],
+    [ "ERROR_TOO_MANY_PHOTOS", "dialogs_8h.html#aaf5b3f727795ce56baf643e78e5ccf8c", null ],
+    [ "filenameDialogs", "dialogs_8h.html#a5246e7c03cf7330b917ba4e1817ed6d2", null ],
+    [ "GREETINGS", "dialogs_8h.html#a25cc7b9dcf7721b7af7fd9bf57318bce", null ],
+    [ "HELP", "dialogs_8h.html#a44bc41b3869f7d1b6eb3f1e052befcdc", null ],
+    [ "HINT", "dialogs_8h.html#a8b4d2adc6096f5607758127768f713b3", null ],
+    [ "INFO", "dialogs_8h.html#a64b820d804584a0d7f279b1a7bddfaeb", null ],
+    [ "LANGUAGES_BUTTONS", "dialogs_8h.html#aa14a40c1eee12db0df90dd4bea0eba8e", null ],
+    [ "SELECT_LANGUAGE", "dialogs_8h.html#a409144296296ae35168567c49a8c0e1a", null ]
+];

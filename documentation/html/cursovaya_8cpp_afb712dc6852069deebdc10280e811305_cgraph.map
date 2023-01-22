@@ -1,0 +1,6 @@
+<map id="getReplyKeyboardMarkup" name="getReplyKeyboardMarkup">
+<area shape="rect" id="node1" title="Функция получения клавиатуры для выбора языка" alt="" coords="5,5,176,31"/>
+<area shape="rect" id="node2" href="$dialogs_8h.html#abccf0729d4972f706dce48b73d3b2b6a" title="Функция получения подписи кнопки смены языка" alt="" coords="224,5,388,31"/>
+<area shape="rect" id="node3" href="$dialogs_8h.html#aa61017178f7b6622a86a4889335ff700" title="Функция получения диалога" alt="" coords="436,5,512,31"/>
+<area shape="rect" id="node4" href="$dialogs_8h.html#aceddf3376fac8a9ad9c1e7f72be6d818" title="Функция получения диалога" alt="" coords="560,5,673,31"/>
+</map>

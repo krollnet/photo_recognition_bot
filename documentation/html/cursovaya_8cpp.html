@@ -1,0 +1,599 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Photo recognition bot: Файл cursovaya.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Photo recognition bot<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Telegram бот, распознающий текст на изображениях</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('cursovaya_8cpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Файл cursovaya.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Файл логики работы бота и обработки изображений  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="cursovaya_8h_source.html">cursovaya.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dialogs_8h_source.html">dialogs.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="local_storage_8h_source.html">localStorage.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для cursovaya.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="cursovaya_8cpp__incl.png" border="0" usemap="#acursovaya_8cpp" alt=""/></div>
+<map name="acursovaya_8cpp" id="acursovaya_8cpp">
+<area shape="rect" title="Файл логики работы бота и обработки изображений" alt="" coords="851,5,957,31"/>
+<area shape="rect" href="cursovaya_8h.html" title="Заголовочный файл для cursovaya.cpp." alt="" coords="496,79,587,104"/>
+<area shape="rect" href="dialogs_8h.html" title="Файл логики диалогов" alt="" coords="867,79,941,104"/>
+<area shape="rect" href="local_storage_8h.html" title="Файл класса хранилища пользователей" alt="" coords="1039,79,1145,104"/>
+<area shape="rect" title=" " alt="" coords="5,152,77,177"/>
+<area shape="rect" title=" " alt="" coords="834,152,899,177"/>
+<area shape="rect" title=" " alt="" coords="101,152,163,177"/>
+<area shape="rect" title=" " alt="" coords="187,152,282,177"/>
+<area shape="rect" title=" " alt="" coords="307,152,443,177"/>
+<area shape="rect" title=" " alt="" coords="467,152,615,177"/>
+<area shape="rect" title=" " alt="" coords="640,152,699,177"/>
+<area shape="rect" title=" " alt="" coords="723,152,810,177"/>
+<area shape="rect" title=" " alt="" coords="924,152,1055,177"/>
+<area shape="rect" href="storageuser_8h.html" title="Файл класса пользователей" alt="" coords="1079,152,1180,177"/>
+<area shape="rect" title=" " alt="" coords="1046,225,1103,251"/>
+<area shape="rect" href="storagerecord_8h.html" title="Файл класса записей хранилища пользовательских запросов" alt="" coords="1128,225,1240,251"/>
+</map>
+</div>
+</div>
+<p><a href="cursovaya_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ada2ffbb1419621e1b3bfe18b3fbe748c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cursovaya_8cpp.html#ada2ffbb1419621e1b3bfe18b3fbe748c">getToken</a> ()</td></tr>
+<tr class="memdesc:ada2ffbb1419621e1b3bfe18b3fbe748c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция получения токена для Telegram API.  <br /></td></tr>
+<tr class="separator:ada2ffbb1419621e1b3bfe18b3fbe748c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc5f469db43faeae20807a0a6bf91963"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cursovaya_8cpp.html#afc5f469db43faeae20807a0a6bf91963">ocrImageFile</a> (std::string &amp;filename)</td></tr>
+<tr class="memdesc:afc5f469db43faeae20807a0a6bf91963"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция распознавания текста на изображении по имени файла  <br /></td></tr>
+<tr class="separator:afc5f469db43faeae20807a0a6bf91963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a402e1429ddec10958e677ac812858088"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cursovaya_8cpp.html#a402e1429ddec10958e677ac812858088">ocrImageData</a> (std::string &amp;imageData)</td></tr>
+<tr class="memdesc:a402e1429ddec10958e677ac812858088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция распознавания текста на изображении по объекту изображения  <br /></td></tr>
+<tr class="separator:a402e1429ddec10958e677ac812858088"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a928c7d0bdbe6eea908386a99e384dd99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cursovaya_8cpp.html#a928c7d0bdbe6eea908386a99e384dd99">initialTesseract</a> ()</td></tr>
+<tr class="memdesc:a928c7d0bdbe6eea908386a99e384dd99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Процедура инициализации <b>tesseractApi</b>  <br /></td></tr>
+<tr class="separator:a928c7d0bdbe6eea908386a99e384dd99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab208a764a527ab13fd0c8a1a323727b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cursovaya_8cpp.html#ab208a764a527ab13fd0c8a1a323727b1">freeTesseract</a> ()</td></tr>
+<tr class="memdesc:ab208a764a527ab13fd0c8a1a323727b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Процедура высвобождения памяти, занятой <b>tesseractApi</b>  <br /></td></tr>
+<tr class="separator:ab208a764a527ab13fd0c8a1a323727b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaab5e40c5651939de700fd45f93f39f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cursovaya_8cpp.html#aaab5e40c5651939de700fd45f93f39f1">changeLanguage</a> (TgBot::Bot &amp;bot, TgBot::Message::Ptr message)</td></tr>
+<tr class="memdesc:aaab5e40c5651939de700fd45f93f39f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Процедура смены языка пользовательского интерфейса бота  <br /></td></tr>
+<tr class="separator:aaab5e40c5651939de700fd45f93f39f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb712dc6852069deebdc10280e811305"><td class="memItemLeft" align="right" valign="top">TgBot::ReplyKeyboardMarkup::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cursovaya_8cpp.html#afb712dc6852069deebdc10280e811305">getReplyKeyboardMarkup</a> ()</td></tr>
+<tr class="memdesc:afb712dc6852069deebdc10280e811305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция получения клавиатуры для выбора языка  <br /></td></tr>
+<tr class="separator:afb712dc6852069deebdc10280e811305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cursovaya_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Точка входа в приложение  <br /></td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:ac71a5817efc44660287cb4a4994f839b"><td class="memItemLeft" align="right" valign="top">tesseract::TessBaseAPI *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cursovaya_8cpp.html#ac71a5817efc44660287cb4a4994f839b">tesseractApi</a> = nullptr</td></tr>
+<tr class="memdesc:ac71a5817efc44660287cb4a4994f839b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Объект <b>tesseractApi</b> для распознавания текста на изображении  <br /></td></tr>
+<tr class="separator:ac71a5817efc44660287cb4a4994f839b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab62ceb70973f1ed5b43b621134597fef"><td class="memItemLeft" align="right" valign="top">TgBot::ReplyKeyboardMarkup::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cursovaya_8cpp.html#ab62ceb70973f1ed5b43b621134597fef">keyboard</a> = nullptr</td></tr>
+<tr class="memdesc:ab62ceb70973f1ed5b43b621134597fef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Объект клавиатуры для выбора языка  <br /></td></tr>
+<tr class="separator:ab62ceb70973f1ed5b43b621134597fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf6c9adce9136aefd53ed67cfb18ab55"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; TgBot::ReplyKeyboardRemove &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cursovaya_8cpp.html#aaf6c9adce9136aefd53ed67cfb18ab55">removeKeyboard</a> = nullptr</td></tr>
+<tr class="memdesc:aaf6c9adce9136aefd53ed67cfb18ab55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Объект для удаления клавиатуры  <br /></td></tr>
+<tr class="separator:aaf6c9adce9136aefd53ed67cfb18ab55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58ea5124124da1a77bb0006b67a6b5d4"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cursovaya_8cpp.html#a58ea5124124da1a77bb0006b67a6b5d4">commands</a> = { &quot;/start&quot;, &quot;/help&quot;, &quot;/info&quot;, &quot;/lang&quot;, &quot;/history&quot;}</td></tr>
+<tr class="memdesc:a58ea5124124da1a77bb0006b67a6b5d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Множество комманд бота  <br /></td></tr>
+<tr class="separator:a58ea5124124da1a77bb0006b67a6b5d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23ce1c25d8803ba0867082f25d0b639b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cursovaya_8cpp.html#a23ce1c25d8803ba0867082f25d0b639b">languages</a> = { &quot;en&quot;, &quot;ru&quot; }</td></tr>
+<tr class="memdesc:a23ce1c25d8803ba0867082f25d0b639b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Список поддерживаемых языков интерфейса  <br /></td></tr>
+<tr class="separator:a23ce1c25d8803ba0867082f25d0b639b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Файл логики работы бота и обработки изображений </p>
+<dl class="section author"><dt>Автор</dt><dd>Фонова Полина Викторовна </dd></dl>
+<dl class="section version"><dt>Версия</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Дата</dt><dd>Январь 2023 года </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="cursovaya_8cpp_source.html">cursovaya.cpp</a></p>
+</div><h2 class="groupheader">Функции</h2>
+<a id="aaab5e40c5651939de700fd45f93f39f1" name="aaab5e40c5651939de700fd45f93f39f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaab5e40c5651939de700fd45f93f39f1">&#9670;&#160;</a></span>changeLanguage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void changeLanguage </td>
+          <td>(</td>
+          <td class="paramtype">TgBot::Bot &amp;&#160;</td>
+          <td class="paramname"><em>bot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TgBot::Message::Ptr&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Процедура смены языка пользовательского интерфейса бота </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bot</td><td>Ссылка на объект бота </td></tr>
+    <tr><td class="paramname">message</td><td>Объект сообщения </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="cursovaya_8cpp_source.html">cursovaya.cpp</a> строка <a class="el" href="cursovaya_8cpp_source.html#l00240">240</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="cursovaya_8cpp_aaab5e40c5651939de700fd45f93f39f1_cgraph.png" border="0" usemap="#acursovaya_8cpp_aaab5e40c5651939de700fd45f93f39f1_cgraph" alt=""/></div>
+<map name="acursovaya_8cpp_aaab5e40c5651939de700fd45f93f39f1_cgraph" id="acursovaya_8cpp_aaab5e40c5651939de700fd45f93f39f1_cgraph">
+<area shape="rect" title="Процедура смены языка пользовательского интерфейса бота" alt="" coords="5,31,125,56"/>
+<area shape="rect" href="dialogs_8h.html#add8ec8cb6a7fbfb070fe37ea991a8a0d" title="Функция получения диалога смены языка" alt="" coords="174,5,323,31"/>
+<area shape="rect" href="class_user_storage.html#a517d664566fb7190ce95e1b5688851ed" title="Метод получения экземпляра класса&#45;одиночки UserStorage" alt="" coords="173,55,324,80"/>
+<area shape="rect" href="dialogs_8h.html#aa61017178f7b6622a86a4889335ff700" title="Функция получения диалога" alt="" coords="372,5,448,31"/>
+<area shape="rect" href="dialogs_8h.html#aceddf3376fac8a9ad9c1e7f72be6d818" title="Функция получения диалога" alt="" coords="496,5,609,31"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="cursovaya_8cpp_aaab5e40c5651939de700fd45f93f39f1_icgraph.png" border="0" usemap="#acursovaya_8cpp_aaab5e40c5651939de700fd45f93f39f1_icgraph" alt=""/></div>
+<map name="acursovaya_8cpp_aaab5e40c5651939de700fd45f93f39f1_icgraph" id="acursovaya_8cpp_aaab5e40c5651939de700fd45f93f39f1_icgraph">
+<area shape="rect" title="Процедура смены языка пользовательского интерфейса бота" alt="" coords="104,5,224,31"/>
+<area shape="rect" href="cursovaya_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в приложение" alt="" coords="5,5,56,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab208a764a527ab13fd0c8a1a323727b1" name="ab208a764a527ab13fd0c8a1a323727b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab208a764a527ab13fd0c8a1a323727b1">&#9670;&#160;</a></span>freeTesseract()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void freeTesseract </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Процедура высвобождения памяти, занятой <b>tesseractApi</b> </p>
+
+<p class="definition">См. определение в файле <a class="el" href="cursovaya_8cpp_source.html">cursovaya.cpp</a> строка <a class="el" href="cursovaya_8cpp_source.html#l00220">220</a></p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="cursovaya_8cpp_ab208a764a527ab13fd0c8a1a323727b1_icgraph.png" border="0" usemap="#acursovaya_8cpp_ab208a764a527ab13fd0c8a1a323727b1_icgraph" alt=""/></div>
+<map name="acursovaya_8cpp_ab208a764a527ab13fd0c8a1a323727b1_icgraph" id="acursovaya_8cpp_ab208a764a527ab13fd0c8a1a323727b1_icgraph">
+<area shape="rect" title="Процедура высвобождения памяти, занятой tesseractApi" alt="" coords="104,5,204,31"/>
+<area shape="rect" href="cursovaya_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в приложение" alt="" coords="5,5,56,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afb712dc6852069deebdc10280e811305" name="afb712dc6852069deebdc10280e811305"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb712dc6852069deebdc10280e811305">&#9670;&#160;</a></span>getReplyKeyboardMarkup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TgBot::ReplyKeyboardMarkup::Ptr getReplyKeyboardMarkup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция получения клавиатуры для выбора языка </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Объект клавиатуры </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="cursovaya_8cpp_source.html">cursovaya.cpp</a> строка <a class="el" href="cursovaya_8cpp_source.html#l00225">225</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="cursovaya_8cpp_afb712dc6852069deebdc10280e811305_cgraph.png" border="0" usemap="#acursovaya_8cpp_afb712dc6852069deebdc10280e811305_cgraph" alt=""/></div>
+<map name="acursovaya_8cpp_afb712dc6852069deebdc10280e811305_cgraph" id="acursovaya_8cpp_afb712dc6852069deebdc10280e811305_cgraph">
+<area shape="rect" title="Функция получения клавиатуры для выбора языка" alt="" coords="5,5,176,31"/>
+<area shape="rect" href="dialogs_8h.html#abccf0729d4972f706dce48b73d3b2b6a" title="Функция получения подписи кнопки смены языка" alt="" coords="224,5,388,31"/>
+<area shape="rect" href="dialogs_8h.html#aa61017178f7b6622a86a4889335ff700" title="Функция получения диалога" alt="" coords="436,5,512,31"/>
+<area shape="rect" href="dialogs_8h.html#aceddf3376fac8a9ad9c1e7f72be6d818" title="Функция получения диалога" alt="" coords="560,5,673,31"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="cursovaya_8cpp_afb712dc6852069deebdc10280e811305_icgraph.png" border="0" usemap="#acursovaya_8cpp_afb712dc6852069deebdc10280e811305_icgraph" alt=""/></div>
+<map name="acursovaya_8cpp_afb712dc6852069deebdc10280e811305_icgraph" id="acursovaya_8cpp_afb712dc6852069deebdc10280e811305_icgraph">
+<area shape="rect" title="Функция получения клавиатуры для выбора языка" alt="" coords="104,5,275,31"/>
+<area shape="rect" href="cursovaya_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в приложение" alt="" coords="5,5,56,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ada2ffbb1419621e1b3bfe18b3fbe748c" name="ada2ffbb1419621e1b3bfe18b3fbe748c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada2ffbb1419621e1b3bfe18b3fbe748c">&#9670;&#160;</a></span>getToken()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string getToken </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция получения токена для Telegram API. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка с токеном</dd></dl>
+<p>Функция возвращает токен для Telegram API из файла <em>config/token.txt</em>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="cursovaya_8cpp_source.html">cursovaya.cpp</a> строка <a class="el" href="cursovaya_8cpp_source.html#l00184">184</a></p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="cursovaya_8cpp_ada2ffbb1419621e1b3bfe18b3fbe748c_icgraph.png" border="0" usemap="#acursovaya_8cpp_ada2ffbb1419621e1b3bfe18b3fbe748c_icgraph" alt=""/></div>
+<map name="acursovaya_8cpp_ada2ffbb1419621e1b3bfe18b3fbe748c_icgraph" id="acursovaya_8cpp_ada2ffbb1419621e1b3bfe18b3fbe748c_icgraph">
+<area shape="rect" title="Функция получения токена для Telegram API." alt="" coords="104,5,179,31"/>
+<area shape="rect" href="cursovaya_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в приложение" alt="" coords="5,5,56,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a928c7d0bdbe6eea908386a99e384dd99" name="a928c7d0bdbe6eea908386a99e384dd99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a928c7d0bdbe6eea908386a99e384dd99">&#9670;&#160;</a></span>initialTesseract()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void initialTesseract </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Процедура инициализации <b>tesseractApi</b> </p>
+
+<p class="definition">См. определение в файле <a class="el" href="cursovaya_8cpp_source.html">cursovaya.cpp</a> строка <a class="el" href="cursovaya_8cpp_source.html#l00212">212</a></p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="cursovaya_8cpp_a928c7d0bdbe6eea908386a99e384dd99_icgraph.png" border="0" usemap="#acursovaya_8cpp_a928c7d0bdbe6eea908386a99e384dd99_icgraph" alt=""/></div>
+<map name="acursovaya_8cpp_a928c7d0bdbe6eea908386a99e384dd99_icgraph" id="acursovaya_8cpp_a928c7d0bdbe6eea908386a99e384dd99_icgraph">
+<area shape="rect" title="Процедура инициализации tesseractApi" alt="" coords="104,5,213,31"/>
+<area shape="rect" href="cursovaya_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в приложение" alt="" coords="5,5,56,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Точка входа в приложение </p>
+<dl class="section return"><dt>Возвращает</dt><dd>0 если приложение завершилось корректно, иное число в случае ошибки </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="cursovaya_8cpp_source.html">cursovaya.cpp</a> строка <a class="el" href="cursovaya_8cpp_source.html#l00076">76</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="cursovaya_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#acursovaya_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
+<map name="acursovaya_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="acursovaya_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
+<area shape="rect" title="Точка входа в приложение" alt="" coords="5,460,56,485"/>
+<area shape="rect" href="class_user.html#ac7ad8bba285cd87426890aa3a47aa1b7" title="Метод добавления записи" alt="" coords="130,5,249,31"/>
+<area shape="rect" href="cursovaya_8cpp.html#aaab5e40c5651939de700fd45f93f39f1" title="Процедура смены языка пользовательского интерфейса бота" alt="" coords="129,55,249,80"/>
+<area shape="rect" href="class_user_storage.html#a517d664566fb7190ce95e1b5688851ed" title="Метод получения экземпляра класса&#45;одиночки UserStorage" alt="" coords="337,105,487,131"/>
+<area shape="rect" href="class_user.html#ae0c649a678270d65613b2f739dca1c32" title="Количество запросов в истории пользователя" alt="" coords="121,156,258,181"/>
+<area shape="rect" href="dialogs_8h.html#a60709d434b7d5534c1ab08ecffbd7661" title="Функция получения текста ошибки отсутствия истории запросов" alt="" coords="331,207,493,232"/>
+<area shape="rect" href="dialogs_8h.html#ac5d0a556a84f6f0fdd486463c35155b5" title="Функция получения текста ошибки отсутствия фото" alt="" coords="345,257,479,283"/>
+<area shape="rect" href="dialogs_8h.html#a587d6340f84849a7cb09cace3f97cc44" title="Функция получения текста ошибки прывышения количества фотографий" alt="" coords="323,308,501,333"/>
+<area shape="rect" href="dialogs_8h.html#a559f5a14ccb81f21075b5b7294bcfd1c" title="Функция получения диалога приветствия" alt="" coords="359,359,465,384"/>
+<area shape="rect" href="dialogs_8h.html#aae6622f674c2934dd48b08328391a3c3" title="Функция получения текста справки" alt="" coords="371,408,453,433"/>
+<area shape="rect" href="dialogs_8h.html#a87607e98dcf23cff0bed92b7efe39465" title="Функция получения текста подсказки" alt="" coords="373,459,451,484"/>
+<area shape="rect" href="dialogs_8h.html#a475efb530cfaab87a4718869cca8639e" title="Функция получения информации о боте" alt="" coords="374,509,450,535"/>
+<area shape="rect" href="cursovaya_8cpp.html#ab208a764a527ab13fd0c8a1a323727b1" title="Процедура высвобождения памяти, занятой tesseractApi" alt="" coords="139,561,239,587"/>
+<area shape="rect" href="class_user.html#abc59393d99ed212da3c193cd4d5be1da" title="Метод получения истории запросов" alt="" coords="128,611,251,636"/>
+<area shape="rect" href="cursovaya_8cpp.html#afb712dc6852069deebdc10280e811305" title="Функция получения клавиатуры для выбора языка" alt="" coords="104,660,275,685"/>
+<area shape="rect" href="cursovaya_8cpp.html#ada2ffbb1419621e1b3bfe18b3fbe748c" title="Функция получения токена для Telegram API." alt="" coords="152,709,227,735"/>
+<area shape="rect" href="dialogs_8h.html#ae0dd2973b142354c451f4179e13600ea" title="Процедура инициализации диалогов" alt="" coords="142,759,237,784"/>
+<area shape="rect" href="cursovaya_8cpp.html#a928c7d0bdbe6eea908386a99e384dd99" title="Процедура инициализации tesseractApi" alt="" coords="135,808,244,833"/>
+<area shape="rect" href="class_user.html#ae7a1935b898dc85a8800537896094fdd" title="Метод проверки превышения количества запросов на распознование текста" alt="" coords="118,857,261,883"/>
+<area shape="rect" href="cursovaya_8cpp.html#a402e1429ddec10958e677ac812858088" title="Функция распознавания текста на изображении по объекту изображения" alt="" coords="138,907,241,932"/>
+<area shape="rect" href="dialogs_8h.html#add8ec8cb6a7fbfb070fe37ea991a8a0d" title="Функция получения диалога смены языка" alt="" coords="337,56,487,81"/>
+<area shape="rect" href="dialogs_8h.html#aa61017178f7b6622a86a4889335ff700" title="Функция получения диалога" alt="" coords="549,359,625,384"/>
+<area shape="rect" href="dialogs_8h.html#aceddf3376fac8a9ad9c1e7f72be6d818" title="Функция получения диалога" alt="" coords="673,359,787,384"/>
+<area shape="rect" href="dialogs_8h.html#abccf0729d4972f706dce48b73d3b2b6a" title="Функция получения подписи кнопки смены языка" alt="" coords="330,611,494,636"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a402e1429ddec10958e677ac812858088" name="a402e1429ddec10958e677ac812858088"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a402e1429ddec10958e677ac812858088">&#9670;&#160;</a></span>ocrImageData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ocrImageData </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>imageData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция распознавания текста на изображении по объекту изображения </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">imageData</td><td>Объект изображения в виде байт-строки </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка с распознанным текстом </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="cursovaya_8cpp_source.html">cursovaya.cpp</a> строка <a class="el" href="cursovaya_8cpp_source.html#l00202">202</a></p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="cursovaya_8cpp_a402e1429ddec10958e677ac812858088_icgraph.png" border="0" usemap="#acursovaya_8cpp_a402e1429ddec10958e677ac812858088_icgraph" alt=""/></div>
+<map name="acursovaya_8cpp_a402e1429ddec10958e677ac812858088_icgraph" id="acursovaya_8cpp_a402e1429ddec10958e677ac812858088_icgraph">
+<area shape="rect" title="Функция распознавания текста на изображении по объекту изображения" alt="" coords="104,5,207,31"/>
+<area shape="rect" href="cursovaya_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в приложение" alt="" coords="5,5,56,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afc5f469db43faeae20807a0a6bf91963" name="afc5f469db43faeae20807a0a6bf91963"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc5f469db43faeae20807a0a6bf91963">&#9670;&#160;</a></span>ocrImageFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ocrImageFile </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция распознавания текста на изображении по имени файла </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>Путь до изображения </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка с распознанным текстом </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="cursovaya_8cpp_source.html">cursovaya.cpp</a> строка <a class="el" href="cursovaya_8cpp_source.html#l00192">192</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a58ea5124124da1a77bb0006b67a6b5d4" name="a58ea5124124da1a77bb0006b67a6b5d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58ea5124124da1a77bb0006b67a6b5d4">&#9670;&#160;</a></span>commands</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt;std::string&gt; commands = { &quot;/start&quot;, &quot;/help&quot;, &quot;/info&quot;, &quot;/lang&quot;, &quot;/history&quot;}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Множество комманд бота </p>
+
+<p class="definition">См. определение в файле <a class="el" href="cursovaya_8cpp_source.html">cursovaya.cpp</a> строка <a class="el" href="cursovaya_8cpp_source.html#l00066">66</a></p>
+
+</div>
+</div>
+<a id="ab62ceb70973f1ed5b43b621134597fef" name="ab62ceb70973f1ed5b43b621134597fef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab62ceb70973f1ed5b43b621134597fef">&#9670;&#160;</a></span>keyboard</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TgBot::ReplyKeyboardMarkup::Ptr keyboard = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Объект клавиатуры для выбора языка </p>
+
+<p class="definition">См. определение в файле <a class="el" href="cursovaya_8cpp_source.html">cursovaya.cpp</a> строка <a class="el" href="cursovaya_8cpp_source.html#l00060">60</a></p>
+
+</div>
+</div>
+<a id="a23ce1c25d8803ba0867082f25d0b639b" name="a23ce1c25d8803ba0867082f25d0b639b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23ce1c25d8803ba0867082f25d0b639b">&#9670;&#160;</a></span>languages</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; languages = { &quot;en&quot;, &quot;ru&quot; }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Список поддерживаемых языков интерфейса </p>
+
+<p class="definition">См. определение в файле <a class="el" href="cursovaya_8cpp_source.html">cursovaya.cpp</a> строка <a class="el" href="cursovaya_8cpp_source.html#l00070">70</a></p>
+
+</div>
+</div>
+<a id="aaf6c9adce9136aefd53ed67cfb18ab55" name="aaf6c9adce9136aefd53ed67cfb18ab55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf6c9adce9136aefd53ed67cfb18ab55">&#9670;&#160;</a></span>removeKeyboard</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;TgBot::ReplyKeyboardRemove&gt; removeKeyboard = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Объект для удаления клавиатуры </p>
+
+<p class="definition">См. определение в файле <a class="el" href="cursovaya_8cpp_source.html">cursovaya.cpp</a> строка <a class="el" href="cursovaya_8cpp_source.html#l00061">61</a></p>
+
+</div>
+</div>
+<a id="ac71a5817efc44660287cb4a4994f839b" name="ac71a5817efc44660287cb4a4994f839b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac71a5817efc44660287cb4a4994f839b">&#9670;&#160;</a></span>tesseractApi</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tesseract::TessBaseAPI* tesseractApi = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Объект <b>tesseractApi</b> для распознавания текста на изображении </p>
+
+<p class="definition">См. определение в файле <a class="el" href="cursovaya_8cpp_source.html">cursovaya.cpp</a> строка <a class="el" href="cursovaya_8cpp_source.html#l00059">59</a></p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="cursovaya_8cpp.html">cursovaya.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
+</body>
+</html>

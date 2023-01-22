@@ -1,0 +1,7 @@
+<map id="changeLanguage" name="changeLanguage">
+<area shape="rect" id="node1" title="Процедура смены языка пользовательского интерфейса бота" alt="" coords="5,31,125,56"/>
+<area shape="rect" id="node2" href="$dialogs_8h.html#add8ec8cb6a7fbfb070fe37ea991a8a0d" title="Функция получения диалога смены языка" alt="" coords="174,5,323,31"/>
+<area shape="rect" id="node5" href="$class_user_storage.html#a517d664566fb7190ce95e1b5688851ed" title="Метод получения экземпляра класса&#45;одиночки UserStorage" alt="" coords="173,55,324,80"/>
+<area shape="rect" id="node3" href="$dialogs_8h.html#aa61017178f7b6622a86a4889335ff700" title="Функция получения диалога" alt="" coords="372,5,448,31"/>
+<area shape="rect" id="node4" href="$dialogs_8h.html#aceddf3376fac8a9ad9c1e7f72be6d818" title="Функция получения диалога" alt="" coords="496,5,609,31"/>
+</map>

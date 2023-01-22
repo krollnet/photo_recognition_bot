@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Photo recognition bot: Исходный файл cursovaya.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Photo recognition bot<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Telegram бот, распознающий текст на изображениях</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('cursovaya_8cpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">cursovaya.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="cursovaya_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="cursovaya_8h.html">cursovaya.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="dialogs_8h.html">dialogs.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="local_storage_8h.html">localStorage.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>std::string <a class="code hl_function" href="cursovaya_8cpp.html#ada2ffbb1419621e1b3bfe18b3fbe748c">getToken</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>std::string <a class="code hl_function" href="cursovaya_8cpp.html#afc5f469db43faeae20807a0a6bf91963">ocrImageFile</a>(std::string&amp; filename);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>std::string <a class="code hl_function" href="cursovaya_8cpp.html#a402e1429ddec10958e677ac812858088">ocrImageData</a>(std::string&amp; imageData);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">void</span> <a class="code hl_function" href="cursovaya_8cpp.html#a928c7d0bdbe6eea908386a99e384dd99">initialTesseract</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keywordtype">void</span> <a class="code hl_function" href="cursovaya_8cpp.html#ab208a764a527ab13fd0c8a1a323727b1">freeTesseract</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keywordtype">void</span> <a class="code hl_function" href="cursovaya_8cpp.html#aaab5e40c5651939de700fd45f93f39f1">changeLanguage</a>(TgBot::Bot&amp; bot, TgBot::Message::Ptr message);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>TgBot::ReplyKeyboardMarkup::Ptr <a class="code hl_function" href="cursovaya_8cpp.html#afb712dc6852069deebdc10280e811305">getReplyKeyboardMarkup</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="cursovaya_8cpp.html#ac71a5817efc44660287cb4a4994f839b">   59</a></span>tesseract::TessBaseAPI* <a class="code hl_variable" href="cursovaya_8cpp.html#ac71a5817efc44660287cb4a4994f839b">tesseractApi</a> = <span class="keyword">nullptr</span>;                         </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="cursovaya_8cpp.html#ab62ceb70973f1ed5b43b621134597fef">   60</a></span>TgBot::ReplyKeyboardMarkup::Ptr <a class="code hl_variable" href="cursovaya_8cpp.html#ab62ceb70973f1ed5b43b621134597fef">keyboard</a> = <span class="keyword">nullptr</span>;                     </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="cursovaya_8cpp.html#aaf6c9adce9136aefd53ed67cfb18ab55">   61</a></span>std::shared_ptr&lt;TgBot::ReplyKeyboardRemove&gt; <a class="code hl_variable" href="cursovaya_8cpp.html#aaf6c9adce9136aefd53ed67cfb18ab55">removeKeyboard</a> = <span class="keyword">nullptr</span>;   </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="cursovaya_8cpp.html#a58ea5124124da1a77bb0006b67a6b5d4">   66</a></span>std::set&lt;std::string&gt; <a class="code hl_variable" href="cursovaya_8cpp.html#a58ea5124124da1a77bb0006b67a6b5d4">commands</a> = { <span class="stringliteral">&quot;/start&quot;</span>, <span class="stringliteral">&quot;/help&quot;</span>, <span class="stringliteral">&quot;/info&quot;</span>, <span class="stringliteral">&quot;/lang&quot;</span>, <span class="stringliteral">&quot;/history&quot;</span>};</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="cursovaya_8cpp.html#a23ce1c25d8803ba0867082f25d0b639b">   70</a></span>std::vector&lt;std::string&gt; <a class="code hl_variable" href="cursovaya_8cpp.html#a23ce1c25d8803ba0867082f25d0b639b">languages</a> = { <span class="stringliteral">&quot;en&quot;</span>, <span class="stringliteral">&quot;ru&quot;</span> };</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="cursovaya_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   76</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="cursovaya_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_function" href="dialogs_8h.html#ae0dd2973b142354c451f4179e13600ea">initialDialogs</a>();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_function" href="cursovaya_8cpp.html#a928c7d0bdbe6eea908386a99e384dd99">initialTesseract</a>();</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_variable" href="cursovaya_8cpp.html#ab62ceb70973f1ed5b43b621134597fef">keyboard</a> = <a class="code hl_function" href="cursovaya_8cpp.html#afb712dc6852069deebdc10280e811305">getReplyKeyboardMarkup</a>();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    TgBot::Bot bot(<a class="code hl_function" href="cursovaya_8cpp.html#ada2ffbb1419621e1b3bfe18b3fbe748c">getToken</a>());</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    bot.getEvents().onCommand(<span class="stringliteral">&quot;start&quot;</span>, [&amp;bot](TgBot::Message::Ptr message) {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        std::string currentLanguage = <a class="code hl_function" href="class_user_storage.html#a517d664566fb7190ce95e1b5688851ed">UserStorage::Instance</a>()[message-&gt;chat-&gt;id]-&gt;language;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        bot.getApi().sendMessage(message-&gt;chat-&gt;id, <a class="code hl_function" href="dialogs_8h.html#a559f5a14ccb81f21075b5b7294bcfd1c">dialogGreeting</a>(currentLanguage));</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_function" href="cursovaya_8cpp.html#aaab5e40c5651939de700fd45f93f39f1">changeLanguage</a>(bot, message);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    });</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    bot.getEvents().onCommand(<span class="stringliteral">&quot;help&quot;</span>, [&amp;bot](TgBot::Message::Ptr message) {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        std::string currentLanguage = <a class="code hl_function" href="class_user_storage.html#a517d664566fb7190ce95e1b5688851ed">UserStorage::Instance</a>()[message-&gt;chat-&gt;id]-&gt;language;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        bot.getApi().sendMessage(message-&gt;chat-&gt;id, <a class="code hl_function" href="dialogs_8h.html#aae6622f674c2934dd48b08328391a3c3">dialogHelp</a>(currentLanguage));</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    });</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    bot.getEvents().onCommand(<span class="stringliteral">&quot;info&quot;</span>, [&amp;bot](TgBot::Message::Ptr message) {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        std::string currentLanguage = <a class="code hl_function" href="class_user_storage.html#a517d664566fb7190ce95e1b5688851ed">UserStorage::Instance</a>()[message-&gt;chat-&gt;id]-&gt;language;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        bot.getApi().sendMessage(message-&gt;chat-&gt;id, <a class="code hl_function" href="dialogs_8h.html#a475efb530cfaab87a4718869cca8639e">dialogInfo</a>(currentLanguage));</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        bot.getApi().sendMessage(message-&gt;chat-&gt;id, <a class="code hl_function" href="dialogs_8h.html#a87607e98dcf23cff0bed92b7efe39465">dialogHint</a>(currentLanguage));</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    });</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    bot.getEvents().onCommand(<span class="stringliteral">&quot;history&quot;</span>, [&amp;bot](TgBot::Message::Ptr message) {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <a class="code hl_class" href="class_user.html">User</a>* user = <a class="code hl_function" href="class_user_storage.html#a517d664566fb7190ce95e1b5688851ed">UserStorage::Instance</a>()[message-&gt;chat-&gt;id];</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        std::string currentLanguage = user-&gt;<a class="code hl_variable" href="class_user.html#a8b7025355bc1aa34ca8399009f71627c">language</a>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">if</span> (user-&gt;<a class="code hl_function" href="class_user.html#ae0c649a678270d65613b2f739dca1c32">countRecords</a>() == 0) {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            bot.getApi().sendMessage(message-&gt;chat-&gt;id, <a class="code hl_function" href="dialogs_8h.html#a60709d434b7d5534c1ab08ecffbd7661">dialogErrorEmptyHistory</a>(currentLanguage));</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; record : user-&gt;<a class="code hl_function" href="class_user.html#abc59393d99ed212da3c193cd4d5be1da">getRecords</a>()) {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                std::string text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                date::sys_seconds tp{ std::chrono::seconds{record-&gt;getDateMessage()}};</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                text += date::format(<span class="stringliteral">&quot;%Y-%m-%d %I:%M:%S %p&quot;</span>, tp) + <span class="stringliteral">&quot; GMT+0\n\n&quot;</span>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                text += record-&gt;getResult();</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                bot.getApi().sendMessage(message-&gt;chat-&gt;id, text);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    });</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    bot.getEvents().onAnyMessage([&amp;bot](TgBot::Message::Ptr message) {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        clock_t tStart = clock();</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <a class="code hl_class" href="class_user.html">User</a>* user = <a class="code hl_function" href="class_user_storage.html#a517d664566fb7190ce95e1b5688851ed">UserStorage::Instance</a>()[message-&gt;chat-&gt;id];</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        std::string currentLanguage = user-&gt;<a class="code hl_variable" href="class_user.html#a8b7025355bc1aa34ca8399009f71627c">language</a>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">if</span> (message-&gt;text.find(<span class="stringliteral">&quot;/lang&quot;</span>, 0) == 0) {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="keywordflow">if</span> (message-&gt;text.size() &lt; 6) {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                <a class="code hl_function" href="cursovaya_8cpp.html#aaab5e40c5651939de700fd45f93f39f1">changeLanguage</a>(bot, message);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            }</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            std::string newLanguage = message-&gt;text.substr(6, 2);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            <span class="keywordflow">if</span> (std::find(<a class="code hl_variable" href="cursovaya_8cpp.html#a23ce1c25d8803ba0867082f25d0b639b">languages</a>.begin(), <a class="code hl_variable" href="cursovaya_8cpp.html#a23ce1c25d8803ba0867082f25d0b639b">languages</a>.end(), newLanguage) != <a class="code hl_variable" href="cursovaya_8cpp.html#a23ce1c25d8803ba0867082f25d0b639b">languages</a>.end()) {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                <a class="code hl_function" href="class_user_storage.html#a517d664566fb7190ce95e1b5688851ed">UserStorage::Instance</a>()[message-&gt;chat-&gt;id]-&gt;language = newLanguage;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                bot.getApi().sendMessage(message-&gt;chat-&gt;id, <a class="code hl_function" href="dialogs_8h.html#a475efb530cfaab87a4718869cca8639e">dialogInfo</a>(newLanguage));</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                bot.getApi().sendMessage(message-&gt;chat-&gt;id, <a class="code hl_function" href="dialogs_8h.html#a87607e98dcf23cff0bed92b7efe39465">dialogHint</a>(newLanguage));</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            }</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                <a class="code hl_function" href="cursovaya_8cpp.html#aaab5e40c5651939de700fd45f93f39f1">changeLanguage</a>(bot, message);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; command : <a class="code hl_variable" href="cursovaya_8cpp.html#a58ea5124124da1a77bb0006b67a6b5d4">commands</a>) {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            <span class="keywordflow">if</span> (message-&gt;text.find(command) != std::string::npos) {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <span class="keywordflow">if</span> (message-&gt;photo.empty()) {</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            bot.getApi().sendMessage(message-&gt;chat-&gt;id, <a class="code hl_function" href="dialogs_8h.html#ac5d0a556a84f6f0fdd486463c35155b5">dialogErrorNoPhoto</a>(currentLanguage));</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        }</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="keywordflow">if</span> (user-&gt;<a class="code hl_function" href="class_user.html#ae7a1935b898dc85a8800537896094fdd">isLimitRecords</a>()) {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            bot.getApi().sendMessage(message-&gt;chat-&gt;id, <a class="code hl_function" href="dialogs_8h.html#a587d6340f84849a7cb09cace3f97cc44">dialogErrorTooManyPhotos</a>(currentLanguage));</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        }</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        std::string fileId = message-&gt;photo.back()-&gt;fileId;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        std::string filePath = bot.getApi().getFile(fileId)-&gt;filePath;   </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        std::string imageData = bot.getApi().downloadFile(filePath);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <span class="comment">// std::ofstream file(filename, std::ios::binary); // output file stream - передача данных из нашего кода в файл</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <span class="comment">// file &lt;&lt; imageData;</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <span class="comment">// file.close();</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="comment">//std::string text = ocrImageFile(filename);</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        std::string text = <a class="code hl_function" href="cursovaya_8cpp.html#a402e1429ddec10958e677ac812858088">ocrImageData</a>(imageData);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        user-&gt;<a class="code hl_function" href="class_user.html#ac7ad8bba285cd87426890aa3a47aa1b7">addRecord</a>(text, fileId, filePath, message-&gt;date);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            bot.getApi().sendMessage(message-&gt;chat-&gt;id, text, <span class="keyword">false</span>, message-&gt;messageId);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        }</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <span class="keywordflow">catch</span> (TgBot::TgException&amp; e) {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            bot.getApi().sendMessage(message-&gt;chat-&gt;id, text);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        }</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        bot.getApi().sendMessage(message-&gt;chat-&gt;id, <a class="code hl_function" href="dialogs_8h.html#a87607e98dcf23cff0bed92b7efe39465">dialogHint</a>(currentLanguage));</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        printf(<span class="stringliteral">&quot;Time taken: %.2fs\n&quot;</span>, (<span class="keywordtype">double</span>)(clock() - tStart) / CLOCKS_PER_SEC);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    });</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        printf(<span class="stringliteral">&quot;Bot username: %s\n&quot;</span>, bot.getApi().getMe()-&gt;username.c_str());</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        TgBot::TgLongPoll longPoll(bot);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            printf(<span class="stringliteral">&quot;Long poll started\n&quot;</span>);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            longPoll.start();</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        }</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <a class="code hl_function" href="cursovaya_8cpp.html#ab208a764a527ab13fd0c8a1a323727b1">freeTesseract</a>();</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <span class="keyword">delete</span> <a class="code hl_variable" href="cursovaya_8cpp.html#ab62ceb70973f1ed5b43b621134597fef">keyboard</a>.get();</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    }</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="keywordflow">catch</span> (TgBot::TgException&amp; e) {</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        printf(<span class="stringliteral">&quot;error: %s\n&quot;</span>, e.what());</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    }</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>}</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="cursovaya_8cpp.html#ada2ffbb1419621e1b3bfe18b3fbe748c">  184</a></span>std::string <a class="code hl_function" href="cursovaya_8cpp.html#ada2ffbb1419621e1b3bfe18b3fbe748c">getToken</a>() {</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    std::ifstream file(<span class="stringliteral">&quot;config/token.txt&quot;</span>);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    std::string token;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    file &gt;&gt; token;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    file.close();</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="keywordflow">return</span> token;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>}</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="cursovaya_8cpp.html#afc5f469db43faeae20807a0a6bf91963">  192</a></span>std::string <a class="code hl_function" href="cursovaya_8cpp.html#afc5f469db43faeae20807a0a6bf91963">ocrImageFile</a>(std::string&amp; filename) {</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    Pix* image = pixRead(filename.c_str());</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <a class="code hl_variable" href="cursovaya_8cpp.html#ac71a5817efc44660287cb4a4994f839b">tesseractApi</a>-&gt;SetImage(image);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keywordtype">char</span> *text = <a class="code hl_variable" href="cursovaya_8cpp.html#ac71a5817efc44660287cb4a4994f839b">tesseractApi</a>-&gt;GetUTF8Text();</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    std::string result = text;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="keyword">delete</span>[] text;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    pixDestroy(&amp;image);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>}</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno"><a class="line" href="cursovaya_8cpp.html#a402e1429ddec10958e677ac812858088">  202</a></span>std::string <a class="code hl_function" href="cursovaya_8cpp.html#a402e1429ddec10958e677ac812858088">ocrImageData</a>(std::string&amp; imageData) {</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    Pix* image = pixReadMem((<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*)imageData.c_str(), imageData.size());</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <a class="code hl_variable" href="cursovaya_8cpp.html#ac71a5817efc44660287cb4a4994f839b">tesseractApi</a>-&gt;SetImage(image);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <span class="keywordtype">char</span>* text = <a class="code hl_variable" href="cursovaya_8cpp.html#ac71a5817efc44660287cb4a4994f839b">tesseractApi</a>-&gt;GetUTF8Text();</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    std::string result = text;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    <span class="keyword">delete</span>[] text;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    pixDestroy(&amp;image);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>}</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno"><a class="line" href="cursovaya_8cpp.html#a928c7d0bdbe6eea908386a99e384dd99">  212</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="cursovaya_8cpp.html#a928c7d0bdbe6eea908386a99e384dd99">initialTesseract</a>() {</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <a class="code hl_variable" href="cursovaya_8cpp.html#ac71a5817efc44660287cb4a4994f839b">tesseractApi</a> = <span class="keyword">new</span> tesseract::TessBaseAPI();</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="cursovaya_8cpp.html#ac71a5817efc44660287cb4a4994f839b">tesseractApi</a>-&gt;Init(NULL, <span class="stringliteral">&quot;eng+rus&quot;</span>)) {</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        fprintf(stderr, <span class="stringliteral">&quot;Could not initialize tesseract.\n&quot;</span>);</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        exit(2);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    }  </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>}</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno"><a class="line" href="cursovaya_8cpp.html#ab208a764a527ab13fd0c8a1a323727b1">  220</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="cursovaya_8cpp.html#ab208a764a527ab13fd0c8a1a323727b1">freeTesseract</a>() {</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <a class="code hl_variable" href="cursovaya_8cpp.html#ac71a5817efc44660287cb4a4994f839b">tesseractApi</a>-&gt;End();</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    <span class="keyword">delete</span> <a class="code hl_variable" href="cursovaya_8cpp.html#ac71a5817efc44660287cb4a4994f839b">tesseractApi</a>;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>}</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno"><a class="line" href="cursovaya_8cpp.html#afb712dc6852069deebdc10280e811305">  225</a></span>TgBot::ReplyKeyboardMarkup::Ptr <a class="code hl_function" href="cursovaya_8cpp.html#afb712dc6852069deebdc10280e811305">getReplyKeyboardMarkup</a>() {</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    TgBot::ReplyKeyboardMarkup::Ptr keyboardMarkup(<span class="keyword">new</span> TgBot::ReplyKeyboardMarkup);</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    keyboardMarkup-&gt;resizeKeyboard = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="cursovaya_8cpp.html#a23ce1c25d8803ba0867082f25d0b639b">languages</a>.size(); i++) {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        <span class="keywordflow">if</span> (i % 2 == 0) {</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            keyboardMarkup-&gt;keyboard.push_back(std::vector&lt;TgBot::KeyboardButton::Ptr&gt;());</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        }</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        TgBot::KeyboardButton::Ptr button(<span class="keyword">new</span> TgBot::KeyboardButton);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        button-&gt;text = <span class="stringliteral">&quot;/lang &quot;</span> + <a class="code hl_variable" href="cursovaya_8cpp.html#a23ce1c25d8803ba0867082f25d0b639b">languages</a>[i] + <span class="stringliteral">&quot;\n\n&quot;</span> + <a class="code hl_function" href="dialogs_8h.html#abccf0729d4972f706dce48b73d3b2b6a">dialogLanguagesButtons</a>(<a class="code hl_variable" href="cursovaya_8cpp.html#a23ce1c25d8803ba0867082f25d0b639b">languages</a>[i]);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        keyboardMarkup-&gt;keyboard.back().push_back(button);</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    }</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    keyboardMarkup-&gt;oneTimeKeyboard = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <span class="keywordflow">return</span> keyboardMarkup;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>}</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno"><a class="line" href="cursovaya_8cpp.html#aaab5e40c5651939de700fd45f93f39f1">  240</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="cursovaya_8cpp.html#aaab5e40c5651939de700fd45f93f39f1">changeLanguage</a>(TgBot::Bot&amp; bot, TgBot::Message::Ptr message) {</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    std::string currentLanguage = <a class="code hl_function" href="class_user_storage.html#a517d664566fb7190ce95e1b5688851ed">UserStorage::Instance</a>()[message-&gt;chat-&gt;id]-&gt;language;</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    bot.getApi().sendMessage(message-&gt;chat-&gt;id, <a class="code hl_function" href="dialogs_8h.html#add8ec8cb6a7fbfb070fe37ea991a8a0d">dialogSelectLanguage</a>(currentLanguage), <span class="keyword">false</span>, 0, <a class="code hl_variable" href="cursovaya_8cpp.html#ab62ceb70973f1ed5b43b621134597fef">keyboard</a>, <span class="stringliteral">&quot;Markdown&quot;</span>);</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>}</div>
+<div class="ttc" id="aclass_user_html"><div class="ttname"><a href="class_user.html">User</a></div><div class="ttdoc">Класс пользователей</div><div class="ttdef"><b>Definition:</b> <a href="storageuser_8h_source.html#l00027">storageuser.h:27</a></div></div>
+<div class="ttc" id="aclass_user_html_a8b7025355bc1aa34ca8399009f71627c"><div class="ttname"><a href="class_user.html#a8b7025355bc1aa34ca8399009f71627c">User::language</a></div><div class="ttdeci">std::string language</div><div class="ttdoc">Язык распознавания текста</div><div class="ttdef"><b>Definition:</b> <a href="storageuser_8h_source.html#l00036">storageuser.h:36</a></div></div>
+<div class="ttc" id="aclass_user_html_abc59393d99ed212da3c193cd4d5be1da"><div class="ttname"><a href="class_user.html#abc59393d99ed212da3c193cd4d5be1da">User::getRecords</a></div><div class="ttdeci">std::vector&lt; Record * &gt; getRecords()</div><div class="ttdoc">Метод получения истории запросов</div><div class="ttdef"><b>Definition:</b> <a href="storageuser_8h_source.html#l00080">storageuser.h:80</a></div></div>
+<div class="ttc" id="aclass_user_html_ac7ad8bba285cd87426890aa3a47aa1b7"><div class="ttname"><a href="class_user.html#ac7ad8bba285cd87426890aa3a47aa1b7">User::addRecord</a></div><div class="ttdeci">void addRecord(std::string &amp;text, std::string &amp;imageId, std::string &amp;imagePath, std::int32_t dateMessage)</div><div class="ttdoc">Метод добавления записи</div><div class="ttdef"><b>Definition:</b> <a href="storageuser_8h_source.html#l00065">storageuser.h:65</a></div></div>
+<div class="ttc" id="aclass_user_html_ae0c649a678270d65613b2f739dca1c32"><div class="ttname"><a href="class_user.html#ae0c649a678270d65613b2f739dca1c32">User::countRecords</a></div><div class="ttdeci">int countRecords()</div><div class="ttdoc">Количество запросов в истории пользователя</div><div class="ttdef"><b>Definition:</b> <a href="storageuser_8h_source.html#l00091">storageuser.h:91</a></div></div>
+<div class="ttc" id="aclass_user_html_ae7a1935b898dc85a8800537896094fdd"><div class="ttname"><a href="class_user.html#ae7a1935b898dc85a8800537896094fdd">User::isLimitRecords</a></div><div class="ttdeci">bool isLimitRecords()</div><div class="ttdoc">Метод проверки превышения количества запросов на распознование текста</div><div class="ttdef"><b>Definition:</b> <a href="storageuser_8h_source.html#l00106">storageuser.h:106</a></div></div>
+<div class="ttc" id="aclass_user_storage_html_a517d664566fb7190ce95e1b5688851ed"><div class="ttname"><a href="class_user_storage.html#a517d664566fb7190ce95e1b5688851ed">UserStorage::Instance</a></div><div class="ttdeci">static UserStorage &amp; Instance()</div><div class="ttdoc">Метод получения экземпляра класса-одиночки UserStorage</div><div class="ttdef"><b>Definition:</b> <a href="local_storage_8h_source.html#l00051">localStorage.h:51</a></div></div>
+<div class="ttc" id="acursovaya_8cpp_html_a23ce1c25d8803ba0867082f25d0b639b"><div class="ttname"><a href="cursovaya_8cpp.html#a23ce1c25d8803ba0867082f25d0b639b">languages</a></div><div class="ttdeci">std::vector&lt; std::string &gt; languages</div><div class="ttdoc">Список поддерживаемых языков интерфейса</div><div class="ttdef"><b>Definition:</b> <a href="cursovaya_8cpp_source.html#l00070">cursovaya.cpp:70</a></div></div>
+<div class="ttc" id="acursovaya_8cpp_html_a402e1429ddec10958e677ac812858088"><div class="ttname"><a href="cursovaya_8cpp.html#a402e1429ddec10958e677ac812858088">ocrImageData</a></div><div class="ttdeci">std::string ocrImageData(std::string &amp;imageData)</div><div class="ttdoc">Функция распознавания текста на изображении по объекту изображения</div><div class="ttdef"><b>Definition:</b> <a href="cursovaya_8cpp_source.html#l00202">cursovaya.cpp:202</a></div></div>
+<div class="ttc" id="acursovaya_8cpp_html_a58ea5124124da1a77bb0006b67a6b5d4"><div class="ttname"><a href="cursovaya_8cpp.html#a58ea5124124da1a77bb0006b67a6b5d4">commands</a></div><div class="ttdeci">std::set&lt; std::string &gt; commands</div><div class="ttdoc">Множество комманд бота</div><div class="ttdef"><b>Definition:</b> <a href="cursovaya_8cpp_source.html#l00066">cursovaya.cpp:66</a></div></div>
+<div class="ttc" id="acursovaya_8cpp_html_a928c7d0bdbe6eea908386a99e384dd99"><div class="ttname"><a href="cursovaya_8cpp.html#a928c7d0bdbe6eea908386a99e384dd99">initialTesseract</a></div><div class="ttdeci">void initialTesseract()</div><div class="ttdoc">Процедура инициализации tesseractApi</div><div class="ttdef"><b>Definition:</b> <a href="cursovaya_8cpp_source.html#l00212">cursovaya.cpp:212</a></div></div>
+<div class="ttc" id="acursovaya_8cpp_html_aaab5e40c5651939de700fd45f93f39f1"><div class="ttname"><a href="cursovaya_8cpp.html#aaab5e40c5651939de700fd45f93f39f1">changeLanguage</a></div><div class="ttdeci">void changeLanguage(TgBot::Bot &amp;bot, TgBot::Message::Ptr message)</div><div class="ttdoc">Процедура смены языка пользовательского интерфейса бота</div><div class="ttdef"><b>Definition:</b> <a href="cursovaya_8cpp_source.html#l00240">cursovaya.cpp:240</a></div></div>
+<div class="ttc" id="acursovaya_8cpp_html_aaf6c9adce9136aefd53ed67cfb18ab55"><div class="ttname"><a href="cursovaya_8cpp.html#aaf6c9adce9136aefd53ed67cfb18ab55">removeKeyboard</a></div><div class="ttdeci">std::shared_ptr&lt; TgBot::ReplyKeyboardRemove &gt; removeKeyboard</div><div class="ttdoc">Объект для удаления клавиатуры</div><div class="ttdef"><b>Definition:</b> <a href="cursovaya_8cpp_source.html#l00061">cursovaya.cpp:61</a></div></div>
+<div class="ttc" id="acursovaya_8cpp_html_ab208a764a527ab13fd0c8a1a323727b1"><div class="ttname"><a href="cursovaya_8cpp.html#ab208a764a527ab13fd0c8a1a323727b1">freeTesseract</a></div><div class="ttdeci">void freeTesseract()</div><div class="ttdoc">Процедура высвобождения памяти, занятой tesseractApi</div><div class="ttdef"><b>Definition:</b> <a href="cursovaya_8cpp_source.html#l00220">cursovaya.cpp:220</a></div></div>
+<div class="ttc" id="acursovaya_8cpp_html_ab62ceb70973f1ed5b43b621134597fef"><div class="ttname"><a href="cursovaya_8cpp.html#ab62ceb70973f1ed5b43b621134597fef">keyboard</a></div><div class="ttdeci">TgBot::ReplyKeyboardMarkup::Ptr keyboard</div><div class="ttdoc">Объект клавиатуры для выбора языка</div><div class="ttdef"><b>Definition:</b> <a href="cursovaya_8cpp_source.html#l00060">cursovaya.cpp:60</a></div></div>
+<div class="ttc" id="acursovaya_8cpp_html_ac71a5817efc44660287cb4a4994f839b"><div class="ttname"><a href="cursovaya_8cpp.html#ac71a5817efc44660287cb4a4994f839b">tesseractApi</a></div><div class="ttdeci">tesseract::TessBaseAPI * tesseractApi</div><div class="ttdoc">Объект tesseractApi для распознавания текста на изображении</div><div class="ttdef"><b>Definition:</b> <a href="cursovaya_8cpp_source.html#l00059">cursovaya.cpp:59</a></div></div>
+<div class="ttc" id="acursovaya_8cpp_html_ada2ffbb1419621e1b3bfe18b3fbe748c"><div class="ttname"><a href="cursovaya_8cpp.html#ada2ffbb1419621e1b3bfe18b3fbe748c">getToken</a></div><div class="ttdeci">std::string getToken()</div><div class="ttdoc">Функция получения токена для Telegram API.</div><div class="ttdef"><b>Definition:</b> <a href="cursovaya_8cpp_source.html#l00184">cursovaya.cpp:184</a></div></div>
+<div class="ttc" id="acursovaya_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="cursovaya_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">Точка входа в приложение</div><div class="ttdef"><b>Definition:</b> <a href="cursovaya_8cpp_source.html#l00076">cursovaya.cpp:76</a></div></div>
+<div class="ttc" id="acursovaya_8cpp_html_afb712dc6852069deebdc10280e811305"><div class="ttname"><a href="cursovaya_8cpp.html#afb712dc6852069deebdc10280e811305">getReplyKeyboardMarkup</a></div><div class="ttdeci">TgBot::ReplyKeyboardMarkup::Ptr getReplyKeyboardMarkup()</div><div class="ttdoc">Функция получения клавиатуры для выбора языка</div><div class="ttdef"><b>Definition:</b> <a href="cursovaya_8cpp_source.html#l00225">cursovaya.cpp:225</a></div></div>
+<div class="ttc" id="acursovaya_8cpp_html_afc5f469db43faeae20807a0a6bf91963"><div class="ttname"><a href="cursovaya_8cpp.html#afc5f469db43faeae20807a0a6bf91963">ocrImageFile</a></div><div class="ttdeci">std::string ocrImageFile(std::string &amp;filename)</div><div class="ttdoc">Функция распознавания текста на изображении по имени файла</div><div class="ttdef"><b>Definition:</b> <a href="cursovaya_8cpp_source.html#l00192">cursovaya.cpp:192</a></div></div>
+<div class="ttc" id="acursovaya_8h_html"><div class="ttname"><a href="cursovaya_8h.html">cursovaya.h</a></div><div class="ttdoc">Заголовочный файл для cursovaya.cpp.</div></div>
+<div class="ttc" id="adialogs_8h_html"><div class="ttname"><a href="dialogs_8h.html">dialogs.h</a></div><div class="ttdoc">Файл логики диалогов</div></div>
+<div class="ttc" id="adialogs_8h_html_a475efb530cfaab87a4718869cca8639e"><div class="ttname"><a href="dialogs_8h.html#a475efb530cfaab87a4718869cca8639e">dialogInfo</a></div><div class="ttdeci">std::string dialogInfo(const std::string &amp;language)</div><div class="ttdoc">Функция получения информации о боте</div><div class="ttdef"><b>Definition:</b> <a href="dialogs_8h_source.html#l00128">dialogs.h:128</a></div></div>
+<div class="ttc" id="adialogs_8h_html_a559f5a14ccb81f21075b5b7294bcfd1c"><div class="ttname"><a href="dialogs_8h.html#a559f5a14ccb81f21075b5b7294bcfd1c">dialogGreeting</a></div><div class="ttdeci">std::string dialogGreeting(const std::string &amp;language)</div><div class="ttdoc">Функция получения диалога приветствия</div><div class="ttdef"><b>Definition:</b> <a href="dialogs_8h_source.html#l00102">dialogs.h:102</a></div></div>
+<div class="ttc" id="adialogs_8h_html_a587d6340f84849a7cb09cace3f97cc44"><div class="ttname"><a href="dialogs_8h.html#a587d6340f84849a7cb09cace3f97cc44">dialogErrorTooManyPhotos</a></div><div class="ttdeci">std::string dialogErrorTooManyPhotos(const std::string &amp;language)</div><div class="ttdoc">Функция получения текста ошибки прывышения количества фотографий</div><div class="ttdef"><b>Definition:</b> <a href="dialogs_8h_source.html#l00192">dialogs.h:192</a></div></div>
+<div class="ttc" id="adialogs_8h_html_a60709d434b7d5534c1ab08ecffbd7661"><div class="ttname"><a href="dialogs_8h.html#a60709d434b7d5534c1ab08ecffbd7661">dialogErrorEmptyHistory</a></div><div class="ttdeci">std::string dialogErrorEmptyHistory(const std::string &amp;language)</div><div class="ttdoc">Функция получения текста ошибки отсутствия истории запросов</div><div class="ttdef"><b>Definition:</b> <a href="dialogs_8h_source.html#l00205">dialogs.h:205</a></div></div>
+<div class="ttc" id="adialogs_8h_html_a87607e98dcf23cff0bed92b7efe39465"><div class="ttname"><a href="dialogs_8h.html#a87607e98dcf23cff0bed92b7efe39465">dialogHint</a></div><div class="ttdeci">std::string dialogHint(const std::string &amp;language)</div><div class="ttdoc">Функция получения текста подсказки</div><div class="ttdef"><b>Definition:</b> <a href="dialogs_8h_source.html#l00141">dialogs.h:141</a></div></div>
+<div class="ttc" id="adialogs_8h_html_aae6622f674c2934dd48b08328391a3c3"><div class="ttname"><a href="dialogs_8h.html#aae6622f674c2934dd48b08328391a3c3">dialogHelp</a></div><div class="ttdeci">std::string dialogHelp(const std::string &amp;language)</div><div class="ttdoc">Функция получения текста справки</div><div class="ttdef"><b>Definition:</b> <a href="dialogs_8h_source.html#l00115">dialogs.h:115</a></div></div>
+<div class="ttc" id="adialogs_8h_html_abccf0729d4972f706dce48b73d3b2b6a"><div class="ttname"><a href="dialogs_8h.html#abccf0729d4972f706dce48b73d3b2b6a">dialogLanguagesButtons</a></div><div class="ttdeci">std::string dialogLanguagesButtons(const std::string &amp;language)</div><div class="ttdoc">Функция получения подписи кнопки смены языка</div><div class="ttdef"><b>Definition:</b> <a href="dialogs_8h_source.html#l00166">dialogs.h:166</a></div></div>
+<div class="ttc" id="adialogs_8h_html_ac5d0a556a84f6f0fdd486463c35155b5"><div class="ttname"><a href="dialogs_8h.html#ac5d0a556a84f6f0fdd486463c35155b5">dialogErrorNoPhoto</a></div><div class="ttdeci">std::string dialogErrorNoPhoto(const std::string &amp;language)</div><div class="ttdoc">Функция получения текста ошибки отсутствия фото</div><div class="ttdef"><b>Definition:</b> <a href="dialogs_8h_source.html#l00179">dialogs.h:179</a></div></div>
+<div class="ttc" id="adialogs_8h_html_add8ec8cb6a7fbfb070fe37ea991a8a0d"><div class="ttname"><a href="dialogs_8h.html#add8ec8cb6a7fbfb070fe37ea991a8a0d">dialogSelectLanguage</a></div><div class="ttdeci">std::string dialogSelectLanguage(const std::string &amp;language)</div><div class="ttdoc">Функция получения диалога смены языка</div><div class="ttdef"><b>Definition:</b> <a href="dialogs_8h_source.html#l00154">dialogs.h:154</a></div></div>
+<div class="ttc" id="adialogs_8h_html_ae0dd2973b142354c451f4179e13600ea"><div class="ttname"><a href="dialogs_8h.html#ae0dd2973b142354c451f4179e13600ea">initialDialogs</a></div><div class="ttdeci">void initialDialogs()</div><div class="ttdoc">Процедура инициализации диалогов</div><div class="ttdef"><b>Definition:</b> <a href="dialogs_8h_source.html#l00037">dialogs.h:37</a></div></div>
+<div class="ttc" id="alocal_storage_8h_html"><div class="ttname"><a href="local_storage_8h.html">localStorage.h</a></div><div class="ttdoc">Файл класса хранилища пользователей</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="cursovaya_8cpp.html">cursovaya.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
+</body>
+</html>

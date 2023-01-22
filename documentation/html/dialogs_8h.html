@@ -1,0 +1,1073 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Photo recognition bot: Файл dialogs.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Photo recognition bot<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Telegram бот, распознающий текст на изображениях</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('dialogs_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Файл dialogs.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Файл логики диалогов  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;nlohmann/json.hpp&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для dialogs.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="dialogs_8h__incl.png" border="0" usemap="#adialogs_8h" alt=""/></div>
+<map name="adialogs_8h" id="adialogs_8h">
+<area shape="rect" title="Файл логики диалогов" alt="" coords="62,5,137,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,71,104"/>
+<area shape="rect" title=" " alt="" coords="95,79,226,104"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="dialogs_8h__dep__incl.png" border="0" usemap="#adialogs_8hdep" alt=""/></div>
+<map name="adialogs_8hdep" id="adialogs_8hdep">
+<area shape="rect" title="Файл логики диалогов" alt="" coords="21,5,95,31"/>
+<area shape="rect" href="cursovaya_8cpp.html" title="Файл логики работы бота и обработки изображений" alt="" coords="5,79,111,104"/>
+</map>
+</div>
+</div>
+<p><a href="dialogs_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ae0dd2973b142354c451f4179e13600ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogs_8h.html#ae0dd2973b142354c451f4179e13600ea">initialDialogs</a> ()</td></tr>
+<tr class="memdesc:ae0dd2973b142354c451f4179e13600ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Процедура инициализации диалогов  <br /></td></tr>
+<tr class="separator:ae0dd2973b142354c451f4179e13600ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceddf3376fac8a9ad9c1e7f72be6d818"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogs_8h.html#aceddf3376fac8a9ad9c1e7f72be6d818">selectLanguage</a> (const nlohmann::json dialog, const std::string &amp;language)</td></tr>
+<tr class="memdesc:aceddf3376fac8a9ad9c1e7f72be6d818"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция получения диалога  <br /></td></tr>
+<tr class="separator:aceddf3376fac8a9ad9c1e7f72be6d818"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa61017178f7b6622a86a4889335ff700"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogs_8h.html#aa61017178f7b6622a86a4889335ff700">getDialog</a> (const std::string &amp;language, const size_t countKeys,...)</td></tr>
+<tr class="memdesc:aa61017178f7b6622a86a4889335ff700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция получения диалога  <br /></td></tr>
+<tr class="separator:aa61017178f7b6622a86a4889335ff700"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a559f5a14ccb81f21075b5b7294bcfd1c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogs_8h.html#a559f5a14ccb81f21075b5b7294bcfd1c">dialogGreeting</a> (const std::string &amp;language)</td></tr>
+<tr class="memdesc:a559f5a14ccb81f21075b5b7294bcfd1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция получения диалога приветствия  <br /></td></tr>
+<tr class="separator:a559f5a14ccb81f21075b5b7294bcfd1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae6622f674c2934dd48b08328391a3c3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogs_8h.html#aae6622f674c2934dd48b08328391a3c3">dialogHelp</a> (const std::string &amp;language)</td></tr>
+<tr class="memdesc:aae6622f674c2934dd48b08328391a3c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция получения текста справки  <br /></td></tr>
+<tr class="separator:aae6622f674c2934dd48b08328391a3c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a475efb530cfaab87a4718869cca8639e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogs_8h.html#a475efb530cfaab87a4718869cca8639e">dialogInfo</a> (const std::string &amp;language)</td></tr>
+<tr class="memdesc:a475efb530cfaab87a4718869cca8639e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция получения информации о боте  <br /></td></tr>
+<tr class="separator:a475efb530cfaab87a4718869cca8639e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87607e98dcf23cff0bed92b7efe39465"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogs_8h.html#a87607e98dcf23cff0bed92b7efe39465">dialogHint</a> (const std::string &amp;language)</td></tr>
+<tr class="memdesc:a87607e98dcf23cff0bed92b7efe39465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция получения текста подсказки  <br /></td></tr>
+<tr class="separator:a87607e98dcf23cff0bed92b7efe39465"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add8ec8cb6a7fbfb070fe37ea991a8a0d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogs_8h.html#add8ec8cb6a7fbfb070fe37ea991a8a0d">dialogSelectLanguage</a> (const std::string &amp;language)</td></tr>
+<tr class="memdesc:add8ec8cb6a7fbfb070fe37ea991a8a0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция получения диалога смены языка  <br /></td></tr>
+<tr class="separator:add8ec8cb6a7fbfb070fe37ea991a8a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abccf0729d4972f706dce48b73d3b2b6a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogs_8h.html#abccf0729d4972f706dce48b73d3b2b6a">dialogLanguagesButtons</a> (const std::string &amp;language)</td></tr>
+<tr class="memdesc:abccf0729d4972f706dce48b73d3b2b6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция получения подписи кнопки смены языка  <br /></td></tr>
+<tr class="separator:abccf0729d4972f706dce48b73d3b2b6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5d0a556a84f6f0fdd486463c35155b5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogs_8h.html#ac5d0a556a84f6f0fdd486463c35155b5">dialogErrorNoPhoto</a> (const std::string &amp;language)</td></tr>
+<tr class="memdesc:ac5d0a556a84f6f0fdd486463c35155b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция получения текста ошибки отсутствия фото  <br /></td></tr>
+<tr class="separator:ac5d0a556a84f6f0fdd486463c35155b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a587d6340f84849a7cb09cace3f97cc44"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogs_8h.html#a587d6340f84849a7cb09cace3f97cc44">dialogErrorTooManyPhotos</a> (const std::string &amp;language)</td></tr>
+<tr class="memdesc:a587d6340f84849a7cb09cace3f97cc44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция получения текста ошибки прывышения количества фотографий  <br /></td></tr>
+<tr class="separator:a587d6340f84849a7cb09cace3f97cc44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60709d434b7d5534c1ab08ecffbd7661"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogs_8h.html#a60709d434b7d5534c1ab08ecffbd7661">dialogErrorEmptyHistory</a> (const std::string &amp;language)</td></tr>
+<tr class="memdesc:a60709d434b7d5534c1ab08ecffbd7661"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция получения текста ошибки отсутствия истории запросов  <br /></td></tr>
+<tr class="separator:a60709d434b7d5534c1ab08ecffbd7661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a88d645ff6939dcc1322d5bc71cc94c50"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogs_8h.html#a88d645ff6939dcc1322d5bc71cc94c50">dialogsJson</a></td></tr>
+<tr class="memdesc:a88d645ff6939dcc1322d5bc71cc94c50"><td class="mdescLeft">&#160;</td><td class="mdescRight">JSON-объект, хранящий информацию о диалогах  <br /></td></tr>
+<tr class="separator:a88d645ff6939dcc1322d5bc71cc94c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5246e7c03cf7330b917ba4e1817ed6d2"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogs_8h.html#a5246e7c03cf7330b917ba4e1817ed6d2">filenameDialogs</a> = &quot;config/dialogs.json&quot;</td></tr>
+<tr class="memdesc:a5246e7c03cf7330b917ba4e1817ed6d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Путь к JSON файлу с диалогами  <br /></td></tr>
+<tr class="separator:a5246e7c03cf7330b917ba4e1817ed6d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1eb88d5cfcf1fd4b58ea598da26066e"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogs_8h.html#aa1eb88d5cfcf1fd4b58ea598da26066e">baseLanguage</a> = &quot;en&quot;</td></tr>
+<tr class="memdesc:aa1eb88d5cfcf1fd4b58ea598da26066e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Язык по умолчанию для диалогов  <br /></td></tr>
+<tr class="separator:aa1eb88d5cfcf1fd4b58ea598da26066e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25cc7b9dcf7721b7af7fd9bf57318bce"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogs_8h.html#a25cc7b9dcf7721b7af7fd9bf57318bce">GREETINGS</a> = &quot;greetings&quot;</td></tr>
+<tr class="memdesc:a25cc7b9dcf7721b7af7fd9bf57318bce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ключ для приветствия  <br /></td></tr>
+<tr class="separator:a25cc7b9dcf7721b7af7fd9bf57318bce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44bc41b3869f7d1b6eb3f1e052befcdc"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogs_8h.html#a44bc41b3869f7d1b6eb3f1e052befcdc">HELP</a> = &quot;help&quot;</td></tr>
+<tr class="memdesc:a44bc41b3869f7d1b6eb3f1e052befcdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ключ для справки  <br /></td></tr>
+<tr class="separator:a44bc41b3869f7d1b6eb3f1e052befcdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64b820d804584a0d7f279b1a7bddfaeb"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogs_8h.html#a64b820d804584a0d7f279b1a7bddfaeb">INFO</a> = &quot;info&quot;</td></tr>
+<tr class="memdesc:a64b820d804584a0d7f279b1a7bddfaeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ключ для информации о боте  <br /></td></tr>
+<tr class="separator:a64b820d804584a0d7f279b1a7bddfaeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b4d2adc6096f5607758127768f713b3"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogs_8h.html#a8b4d2adc6096f5607758127768f713b3">HINT</a> = &quot;hint&quot;</td></tr>
+<tr class="memdesc:a8b4d2adc6096f5607758127768f713b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ключ для подсказки  <br /></td></tr>
+<tr class="separator:a8b4d2adc6096f5607758127768f713b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a409144296296ae35168567c49a8c0e1a"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogs_8h.html#a409144296296ae35168567c49a8c0e1a">SELECT_LANGUAGE</a> = &quot;selectLanguage&quot;</td></tr>
+<tr class="memdesc:a409144296296ae35168567c49a8c0e1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ключ для выбора языка  <br /></td></tr>
+<tr class="separator:a409144296296ae35168567c49a8c0e1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa14a40c1eee12db0df90dd4bea0eba8e"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogs_8h.html#aa14a40c1eee12db0df90dd4bea0eba8e">LANGUAGES_BUTTONS</a> = &quot;languagesButtons&quot;</td></tr>
+<tr class="memdesc:aa14a40c1eee12db0df90dd4bea0eba8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ключ для кнопок языков  <br /></td></tr>
+<tr class="separator:aa14a40c1eee12db0df90dd4bea0eba8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe498a0af564a6f2a59e103a8c83c705"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogs_8h.html#abe498a0af564a6f2a59e103a8c83c705">ERROR_BLOCK</a> = &quot;Error&quot;</td></tr>
+<tr class="memdesc:abe498a0af564a6f2a59e103a8c83c705"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ключ для словаря ошибок  <br /></td></tr>
+<tr class="separator:abe498a0af564a6f2a59e103a8c83c705"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94b77dbf703c2b2de8d862152039c378"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogs_8h.html#a94b77dbf703c2b2de8d862152039c378">ERROR_N0_PHOTO</a> = &quot;noPhoto&quot;</td></tr>
+<tr class="memdesc:a94b77dbf703c2b2de8d862152039c378"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ключ для ошибки отсутствия фото  <br /></td></tr>
+<tr class="separator:a94b77dbf703c2b2de8d862152039c378"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf5b3f727795ce56baf643e78e5ccf8c"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogs_8h.html#aaf5b3f727795ce56baf643e78e5ccf8c">ERROR_TOO_MANY_PHOTOS</a> = &quot;tooManyPhotos&quot;</td></tr>
+<tr class="memdesc:aaf5b3f727795ce56baf643e78e5ccf8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ключ для ошибки превышения количества фотографий  <br /></td></tr>
+<tr class="separator:aaf5b3f727795ce56baf643e78e5ccf8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59ed8a96a214e058b876a1191ba55b87"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogs_8h.html#a59ed8a96a214e058b876a1191ba55b87">ERROR_EMPTY_HISTORY</a> = &quot;emptyHistory&quot;</td></tr>
+<tr class="memdesc:a59ed8a96a214e058b876a1191ba55b87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ключ для ошибки пустой истории  <br /></td></tr>
+<tr class="separator:a59ed8a96a214e058b876a1191ba55b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Файл логики диалогов </p>
+<dl class="section author"><dt>Автор</dt><dd>Фонова Полина Викторовна </dd></dl>
+<dl class="section version"><dt>Версия</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Дата</dt><dd>Январь 2023 года </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogs_8h_source.html">dialogs.h</a></p>
+</div><h2 class="groupheader">Функции</h2>
+<a id="a60709d434b7d5534c1ab08ecffbd7661" name="a60709d434b7d5534c1ab08ecffbd7661"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60709d434b7d5534c1ab08ecffbd7661">&#9670;&#160;</a></span>dialogErrorEmptyHistory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string dialogErrorEmptyHistory </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>language</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция получения текста ошибки отсутствия истории запросов </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">language</td><td>Язык ошибки </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Текст ошибки</dd></dl>
+<p>Возвращает текст ошибки отсутствия фото на языке <b>language</b>. Если текста ошибки на этом языке нет, то возвращает текст ошибки на языке <b>baseLanguage</b>. Если текста ошибки на языке <b>baseLanguage</b> нет, то возвращает пустую строку. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogs_8h_source.html">dialogs.h</a> строка <a class="el" href="dialogs_8h_source.html#l00205">205</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="dialogs_8h_a60709d434b7d5534c1ab08ecffbd7661_cgraph.png" border="0" usemap="#adialogs_8h_a60709d434b7d5534c1ab08ecffbd7661_cgraph" alt=""/></div>
+<map name="adialogs_8h_a60709d434b7d5534c1ab08ecffbd7661_cgraph" id="adialogs_8h_a60709d434b7d5534c1ab08ecffbd7661_cgraph">
+<area shape="rect" title="Функция получения текста ошибки отсутствия истории запросов" alt="" coords="5,5,168,31"/>
+<area shape="rect" href="dialogs_8h.html#aa61017178f7b6622a86a4889335ff700" title="Функция получения диалога" alt="" coords="216,5,292,31"/>
+<area shape="rect" href="dialogs_8h.html#aceddf3376fac8a9ad9c1e7f72be6d818" title="Функция получения диалога" alt="" coords="340,5,453,31"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="dialogs_8h_a60709d434b7d5534c1ab08ecffbd7661_icgraph.png" border="0" usemap="#adialogs_8h_a60709d434b7d5534c1ab08ecffbd7661_icgraph" alt=""/></div>
+<map name="adialogs_8h_a60709d434b7d5534c1ab08ecffbd7661_icgraph" id="adialogs_8h_a60709d434b7d5534c1ab08ecffbd7661_icgraph">
+<area shape="rect" title="Функция получения текста ошибки отсутствия истории запросов" alt="" coords="104,5,267,31"/>
+<area shape="rect" href="cursovaya_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в приложение" alt="" coords="5,5,56,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac5d0a556a84f6f0fdd486463c35155b5" name="ac5d0a556a84f6f0fdd486463c35155b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5d0a556a84f6f0fdd486463c35155b5">&#9670;&#160;</a></span>dialogErrorNoPhoto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string dialogErrorNoPhoto </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>language</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция получения текста ошибки отсутствия фото </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">language</td><td>Язык ошибки </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Текст ошибки</dd></dl>
+<p>Возвращает текст ошибки отсутствия фото на языке <b>language</b>. Если текста ошибки на этом языке нет, то возвращает текст ошибки на языке <b>baseLanguage</b>. Если текста ошибки на языке <b>baseLanguage</b> нет, то возвращает пустую строку. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogs_8h_source.html">dialogs.h</a> строка <a class="el" href="dialogs_8h_source.html#l00179">179</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="dialogs_8h_ac5d0a556a84f6f0fdd486463c35155b5_cgraph.png" border="0" usemap="#adialogs_8h_ac5d0a556a84f6f0fdd486463c35155b5_cgraph" alt=""/></div>
+<map name="adialogs_8h_ac5d0a556a84f6f0fdd486463c35155b5_cgraph" id="adialogs_8h_ac5d0a556a84f6f0fdd486463c35155b5_cgraph">
+<area shape="rect" title="Функция получения текста ошибки отсутствия фото" alt="" coords="5,5,140,31"/>
+<area shape="rect" href="dialogs_8h.html#aa61017178f7b6622a86a4889335ff700" title="Функция получения диалога" alt="" coords="188,5,264,31"/>
+<area shape="rect" href="dialogs_8h.html#aceddf3376fac8a9ad9c1e7f72be6d818" title="Функция получения диалога" alt="" coords="312,5,425,31"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="dialogs_8h_ac5d0a556a84f6f0fdd486463c35155b5_icgraph.png" border="0" usemap="#adialogs_8h_ac5d0a556a84f6f0fdd486463c35155b5_icgraph" alt=""/></div>
+<map name="adialogs_8h_ac5d0a556a84f6f0fdd486463c35155b5_icgraph" id="adialogs_8h_ac5d0a556a84f6f0fdd486463c35155b5_icgraph">
+<area shape="rect" title="Функция получения текста ошибки отсутствия фото" alt="" coords="104,5,239,31"/>
+<area shape="rect" href="cursovaya_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в приложение" alt="" coords="5,5,56,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a587d6340f84849a7cb09cace3f97cc44" name="a587d6340f84849a7cb09cace3f97cc44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a587d6340f84849a7cb09cace3f97cc44">&#9670;&#160;</a></span>dialogErrorTooManyPhotos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string dialogErrorTooManyPhotos </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>language</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция получения текста ошибки прывышения количества фотографий </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">language</td><td>Язык ошибки </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Текст ошибки</dd></dl>
+<p>Возвращает текст ошибки отсутствия фото на языке <b>language</b>. Если текста ошибки на этом языке нет, то возвращает текст ошибки на языке <b>baseLanguage</b>. Если текста ошибки на языке <b>baseLanguage</b> нет, то возвращает пустую строку. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogs_8h_source.html">dialogs.h</a> строка <a class="el" href="dialogs_8h_source.html#l00192">192</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="dialogs_8h_a587d6340f84849a7cb09cace3f97cc44_cgraph.png" border="0" usemap="#adialogs_8h_a587d6340f84849a7cb09cace3f97cc44_cgraph" alt=""/></div>
+<map name="adialogs_8h_a587d6340f84849a7cb09cace3f97cc44_cgraph" id="adialogs_8h_a587d6340f84849a7cb09cace3f97cc44_cgraph">
+<area shape="rect" title="Функция получения текста ошибки прывышения количества фотографий" alt="" coords="5,5,184,31"/>
+<area shape="rect" href="dialogs_8h.html#aa61017178f7b6622a86a4889335ff700" title="Функция получения диалога" alt="" coords="232,5,308,31"/>
+<area shape="rect" href="dialogs_8h.html#aceddf3376fac8a9ad9c1e7f72be6d818" title="Функция получения диалога" alt="" coords="356,5,469,31"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="dialogs_8h_a587d6340f84849a7cb09cace3f97cc44_icgraph.png" border="0" usemap="#adialogs_8h_a587d6340f84849a7cb09cace3f97cc44_icgraph" alt=""/></div>
+<map name="adialogs_8h_a587d6340f84849a7cb09cace3f97cc44_icgraph" id="adialogs_8h_a587d6340f84849a7cb09cace3f97cc44_icgraph">
+<area shape="rect" title="Функция получения текста ошибки прывышения количества фотографий" alt="" coords="104,5,283,31"/>
+<area shape="rect" href="cursovaya_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в приложение" alt="" coords="5,5,56,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a559f5a14ccb81f21075b5b7294bcfd1c" name="a559f5a14ccb81f21075b5b7294bcfd1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a559f5a14ccb81f21075b5b7294bcfd1c">&#9670;&#160;</a></span>dialogGreeting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string dialogGreeting </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>language</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция получения диалога приветствия </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">language</td><td>Язык диалога </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка приветствия</dd></dl>
+<p>Возвращает диалог приветствия на языке <b>language</b>. Если диалога приветствия на этом языке нет, то возвращает диалог приветствия на языке <b>baseLanguage</b>. Если диалога приветствия на языке <b>baseLanguage</b> нет, то возвращает пустую строку. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogs_8h_source.html">dialogs.h</a> строка <a class="el" href="dialogs_8h_source.html#l00102">102</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="dialogs_8h_a559f5a14ccb81f21075b5b7294bcfd1c_cgraph.png" border="0" usemap="#adialogs_8h_a559f5a14ccb81f21075b5b7294bcfd1c_cgraph" alt=""/></div>
+<map name="adialogs_8h_a559f5a14ccb81f21075b5b7294bcfd1c_cgraph" id="adialogs_8h_a559f5a14ccb81f21075b5b7294bcfd1c_cgraph">
+<area shape="rect" title="Функция получения диалога приветствия" alt="" coords="5,5,111,31"/>
+<area shape="rect" href="dialogs_8h.html#aa61017178f7b6622a86a4889335ff700" title="Функция получения диалога" alt="" coords="159,5,235,31"/>
+<area shape="rect" href="dialogs_8h.html#aceddf3376fac8a9ad9c1e7f72be6d818" title="Функция получения диалога" alt="" coords="283,5,396,31"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="dialogs_8h_a559f5a14ccb81f21075b5b7294bcfd1c_icgraph.png" border="0" usemap="#adialogs_8h_a559f5a14ccb81f21075b5b7294bcfd1c_icgraph" alt=""/></div>
+<map name="adialogs_8h_a559f5a14ccb81f21075b5b7294bcfd1c_icgraph" id="adialogs_8h_a559f5a14ccb81f21075b5b7294bcfd1c_icgraph">
+<area shape="rect" title="Функция получения диалога приветствия" alt="" coords="104,5,209,31"/>
+<area shape="rect" href="cursovaya_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в приложение" alt="" coords="5,5,56,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aae6622f674c2934dd48b08328391a3c3" name="aae6622f674c2934dd48b08328391a3c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae6622f674c2934dd48b08328391a3c3">&#9670;&#160;</a></span>dialogHelp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string dialogHelp </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>language</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция получения текста справки </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">language</td><td>Язык справки </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Текст справки</dd></dl>
+<p>Возвращает текст справки на языке <b>language</b>. Если текста справки на этом языке нет, то возвращает текст справки на языке <b>baseLanguage</b>. Если текста справки на языке <b>baseLanguage</b> нет, то возвращает пустую строку. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogs_8h_source.html">dialogs.h</a> строка <a class="el" href="dialogs_8h_source.html#l00115">115</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="dialogs_8h_aae6622f674c2934dd48b08328391a3c3_cgraph.png" border="0" usemap="#adialogs_8h_aae6622f674c2934dd48b08328391a3c3_cgraph" alt=""/></div>
+<map name="adialogs_8h_aae6622f674c2934dd48b08328391a3c3_cgraph" id="adialogs_8h_aae6622f674c2934dd48b08328391a3c3_cgraph">
+<area shape="rect" title="Функция получения текста справки" alt="" coords="5,5,88,31"/>
+<area shape="rect" href="dialogs_8h.html#aa61017178f7b6622a86a4889335ff700" title="Функция получения диалога" alt="" coords="136,5,212,31"/>
+<area shape="rect" href="dialogs_8h.html#aceddf3376fac8a9ad9c1e7f72be6d818" title="Функция получения диалога" alt="" coords="260,5,373,31"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="dialogs_8h_aae6622f674c2934dd48b08328391a3c3_icgraph.png" border="0" usemap="#adialogs_8h_aae6622f674c2934dd48b08328391a3c3_icgraph" alt=""/></div>
+<map name="adialogs_8h_aae6622f674c2934dd48b08328391a3c3_icgraph" id="adialogs_8h_aae6622f674c2934dd48b08328391a3c3_icgraph">
+<area shape="rect" title="Функция получения текста справки" alt="" coords="104,5,187,31"/>
+<area shape="rect" href="cursovaya_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в приложение" alt="" coords="5,5,56,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a87607e98dcf23cff0bed92b7efe39465" name="a87607e98dcf23cff0bed92b7efe39465"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87607e98dcf23cff0bed92b7efe39465">&#9670;&#160;</a></span>dialogHint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string dialogHint </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>language</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция получения текста подсказки </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">language</td><td>Язык подсказки </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Текст подсказки</dd></dl>
+<p>Возвращает текст подсказки на языке <b>language</b>. Если текста подсказки на этом языке нет, то возвращает текст подсказки на языке <b>baseLanguage</b>. Если текста подсказки на языке <b>baseLanguage</b> нет, то возвращает пустую строку. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogs_8h_source.html">dialogs.h</a> строка <a class="el" href="dialogs_8h_source.html#l00141">141</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="dialogs_8h_a87607e98dcf23cff0bed92b7efe39465_cgraph.png" border="0" usemap="#adialogs_8h_a87607e98dcf23cff0bed92b7efe39465_cgraph" alt=""/></div>
+<map name="adialogs_8h_a87607e98dcf23cff0bed92b7efe39465_cgraph" id="adialogs_8h_a87607e98dcf23cff0bed92b7efe39465_cgraph">
+<area shape="rect" title="Функция получения текста подсказки" alt="" coords="5,5,84,31"/>
+<area shape="rect" href="dialogs_8h.html#aa61017178f7b6622a86a4889335ff700" title="Функция получения диалога" alt="" coords="132,5,208,31"/>
+<area shape="rect" href="dialogs_8h.html#aceddf3376fac8a9ad9c1e7f72be6d818" title="Функция получения диалога" alt="" coords="256,5,369,31"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="dialogs_8h_a87607e98dcf23cff0bed92b7efe39465_icgraph.png" border="0" usemap="#adialogs_8h_a87607e98dcf23cff0bed92b7efe39465_icgraph" alt=""/></div>
+<map name="adialogs_8h_a87607e98dcf23cff0bed92b7efe39465_icgraph" id="adialogs_8h_a87607e98dcf23cff0bed92b7efe39465_icgraph">
+<area shape="rect" title="Функция получения текста подсказки" alt="" coords="104,5,183,31"/>
+<area shape="rect" href="cursovaya_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в приложение" alt="" coords="5,5,56,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a475efb530cfaab87a4718869cca8639e" name="a475efb530cfaab87a4718869cca8639e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a475efb530cfaab87a4718869cca8639e">&#9670;&#160;</a></span>dialogInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string dialogInfo </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>language</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция получения информации о боте </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">language</td><td>Язык информации о боте </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Текст информации о боте</dd></dl>
+<p>Возвращает текст информации о боте на языке <b>language</b>. Если текста информации о боте на этом языке нет, то возвращает текст информации о боте на языке <b>baseLanguage</b>. Если текста информации о боте на языке <b>baseLanguage</b> нет, то возвращает пустую строку. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogs_8h_source.html">dialogs.h</a> строка <a class="el" href="dialogs_8h_source.html#l00128">128</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="dialogs_8h_a475efb530cfaab87a4718869cca8639e_cgraph.png" border="0" usemap="#adialogs_8h_a475efb530cfaab87a4718869cca8639e_cgraph" alt=""/></div>
+<map name="adialogs_8h_a475efb530cfaab87a4718869cca8639e_cgraph" id="adialogs_8h_a475efb530cfaab87a4718869cca8639e_cgraph">
+<area shape="rect" title="Функция получения информации о боте" alt="" coords="5,5,81,31"/>
+<area shape="rect" href="dialogs_8h.html#aa61017178f7b6622a86a4889335ff700" title="Функция получения диалога" alt="" coords="129,5,205,31"/>
+<area shape="rect" href="dialogs_8h.html#aceddf3376fac8a9ad9c1e7f72be6d818" title="Функция получения диалога" alt="" coords="253,5,367,31"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="dialogs_8h_a475efb530cfaab87a4718869cca8639e_icgraph.png" border="0" usemap="#adialogs_8h_a475efb530cfaab87a4718869cca8639e_icgraph" alt=""/></div>
+<map name="adialogs_8h_a475efb530cfaab87a4718869cca8639e_icgraph" id="adialogs_8h_a475efb530cfaab87a4718869cca8639e_icgraph">
+<area shape="rect" title="Функция получения информации о боте" alt="" coords="104,5,180,31"/>
+<area shape="rect" href="cursovaya_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в приложение" alt="" coords="5,5,56,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abccf0729d4972f706dce48b73d3b2b6a" name="abccf0729d4972f706dce48b73d3b2b6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abccf0729d4972f706dce48b73d3b2b6a">&#9670;&#160;</a></span>dialogLanguagesButtons()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string dialogLanguagesButtons </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>language</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция получения подписи кнопки смены языка </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">language</td><td>Язык кнопки </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Текст подписи кнопки</dd></dl>
+<p>Возвращает текст подписи кнопки на языке <b>language</b>. Если кнопки нет, то возвращает пустую строку. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogs_8h_source.html">dialogs.h</a> строка <a class="el" href="dialogs_8h_source.html#l00166">166</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="dialogs_8h_abccf0729d4972f706dce48b73d3b2b6a_cgraph.png" border="0" usemap="#adialogs_8h_abccf0729d4972f706dce48b73d3b2b6a_cgraph" alt=""/></div>
+<map name="adialogs_8h_abccf0729d4972f706dce48b73d3b2b6a_cgraph" id="adialogs_8h_abccf0729d4972f706dce48b73d3b2b6a_cgraph">
+<area shape="rect" title="Функция получения подписи кнопки смены языка" alt="" coords="5,5,169,31"/>
+<area shape="rect" href="dialogs_8h.html#aa61017178f7b6622a86a4889335ff700" title="Функция получения диалога" alt="" coords="217,5,293,31"/>
+<area shape="rect" href="dialogs_8h.html#aceddf3376fac8a9ad9c1e7f72be6d818" title="Функция получения диалога" alt="" coords="341,5,455,31"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="dialogs_8h_abccf0729d4972f706dce48b73d3b2b6a_icgraph.png" border="0" usemap="#adialogs_8h_abccf0729d4972f706dce48b73d3b2b6a_icgraph" alt=""/></div>
+<map name="adialogs_8h_abccf0729d4972f706dce48b73d3b2b6a_icgraph" id="adialogs_8h_abccf0729d4972f706dce48b73d3b2b6a_icgraph">
+<area shape="rect" title="Функция получения подписи кнопки смены языка" alt="" coords="323,5,487,31"/>
+<area shape="rect" href="cursovaya_8cpp.html#afb712dc6852069deebdc10280e811305" title="Функция получения клавиатуры для выбора языка" alt="" coords="104,5,275,31"/>
+<area shape="rect" href="cursovaya_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в приложение" alt="" coords="5,5,56,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="add8ec8cb6a7fbfb070fe37ea991a8a0d" name="add8ec8cb6a7fbfb070fe37ea991a8a0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add8ec8cb6a7fbfb070fe37ea991a8a0d">&#9670;&#160;</a></span>dialogSelectLanguage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string dialogSelectLanguage </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>language</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция получения диалога смены языка </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">language</td><td>Текущий язык </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Текст диалога смены языка</dd></dl>
+<p>Возвращает диалог смены языка на языке <b>language</b>. Если диалога смены языка на этом языке нет, то возвращает диалог смены языка на языке <b>baseLanguage</b>. Если диалога смены языка на языке <b>baseLanguage</b> нет, то возвращает пустую строку. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogs_8h_source.html">dialogs.h</a> строка <a class="el" href="dialogs_8h_source.html#l00154">154</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="dialogs_8h_add8ec8cb6a7fbfb070fe37ea991a8a0d_cgraph.png" border="0" usemap="#adialogs_8h_add8ec8cb6a7fbfb070fe37ea991a8a0d_cgraph" alt=""/></div>
+<map name="adialogs_8h_add8ec8cb6a7fbfb070fe37ea991a8a0d_cgraph" id="adialogs_8h_add8ec8cb6a7fbfb070fe37ea991a8a0d_cgraph">
+<area shape="rect" title="Функция получения диалога смены языка" alt="" coords="5,5,155,31"/>
+<area shape="rect" href="dialogs_8h.html#aa61017178f7b6622a86a4889335ff700" title="Функция получения диалога" alt="" coords="203,5,279,31"/>
+<area shape="rect" href="dialogs_8h.html#aceddf3376fac8a9ad9c1e7f72be6d818" title="Функция получения диалога" alt="" coords="327,5,440,31"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="dialogs_8h_add8ec8cb6a7fbfb070fe37ea991a8a0d_icgraph.png" border="0" usemap="#adialogs_8h_add8ec8cb6a7fbfb070fe37ea991a8a0d_icgraph" alt=""/></div>
+<map name="adialogs_8h_add8ec8cb6a7fbfb070fe37ea991a8a0d_icgraph" id="adialogs_8h_add8ec8cb6a7fbfb070fe37ea991a8a0d_icgraph">
+<area shape="rect" title="Функция получения диалога смены языка" alt="" coords="272,5,421,31"/>
+<area shape="rect" href="cursovaya_8cpp.html#aaab5e40c5651939de700fd45f93f39f1" title="Процедура смены языка пользовательского интерфейса бота" alt="" coords="104,5,224,31"/>
+<area shape="rect" href="cursovaya_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в приложение" alt="" coords="5,5,56,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa61017178f7b6622a86a4889335ff700" name="aa61017178f7b6622a86a4889335ff700"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa61017178f7b6622a86a4889335ff700">&#9670;&#160;</a></span>getDialog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string getDialog </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>language</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>countKeys</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция получения диалога </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">language</td><td>Язык диалога </td></tr>
+    <tr><td class="paramname">countKeys</td><td>Количество ключей для доступа к диалогу в JSON-файле (по умолчанию 1) </td></tr>
+    <tr><td class="paramname">...</td><td>Ключи для доступа к диалогу в JSON-файле (строки <b>std::string</b>) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка с диалогом</dd></dl>
+<p>Возвращает диалог на языке <b>language</b> по указанной последовательности ключей. Если диалога на этом языке нет, то возвращает диалог на языке <b>baseLanguage</b>. Если диалога на языке <b>baseLanguage</b> нет, то возвращает пустую строку. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogs_8h_source.html">dialogs.h</a> строка <a class="el" href="dialogs_8h_source.html#l00077">77</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="dialogs_8h_aa61017178f7b6622a86a4889335ff700_cgraph.png" border="0" usemap="#adialogs_8h_aa61017178f7b6622a86a4889335ff700_cgraph" alt=""/></div>
+<map name="adialogs_8h_aa61017178f7b6622a86a4889335ff700_cgraph" id="adialogs_8h_aa61017178f7b6622a86a4889335ff700_cgraph">
+<area shape="rect" title="Функция получения диалога" alt="" coords="5,5,81,31"/>
+<area shape="rect" href="dialogs_8h.html#aceddf3376fac8a9ad9c1e7f72be6d818" title="Функция получения диалога" alt="" coords="129,5,243,31"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="dialogs_8h_aa61017178f7b6622a86a4889335ff700_icgraph.png" border="0" usemap="#adialogs_8h_aa61017178f7b6622a86a4889335ff700_icgraph" alt=""/></div>
+<map name="adialogs_8h_aa61017178f7b6622a86a4889335ff700_icgraph" id="adialogs_8h_aa61017178f7b6622a86a4889335ff700_icgraph">
+<area shape="rect" title="Функция получения диалога" alt="" coords="543,208,619,233"/>
+<area shape="rect" href="dialogs_8h.html#a60709d434b7d5534c1ab08ecffbd7661" title="Функция получения текста ошибки отсутствия истории запросов" alt="" coords="112,5,275,31"/>
+<area shape="rect" href="dialogs_8h.html#ac5d0a556a84f6f0fdd486463c35155b5" title="Функция получения текста ошибки отсутствия фото" alt="" coords="126,56,261,81"/>
+<area shape="rect" href="dialogs_8h.html#a587d6340f84849a7cb09cace3f97cc44" title="Функция получения текста ошибки прывышения количества фотографий" alt="" coords="104,105,283,131"/>
+<area shape="rect" href="dialogs_8h.html#a559f5a14ccb81f21075b5b7294bcfd1c" title="Функция получения диалога приветствия" alt="" coords="141,155,246,180"/>
+<area shape="rect" href="dialogs_8h.html#aae6622f674c2934dd48b08328391a3c3" title="Функция получения текста справки" alt="" coords="371,208,454,233"/>
+<area shape="rect" href="dialogs_8h.html#a87607e98dcf23cff0bed92b7efe39465" title="Функция получения текста подсказки" alt="" coords="373,257,452,283"/>
+<area shape="rect" href="dialogs_8h.html#a475efb530cfaab87a4718869cca8639e" title="Функция получения информации о боте" alt="" coords="375,307,451,332"/>
+<area shape="rect" href="dialogs_8h.html#abccf0729d4972f706dce48b73d3b2b6a" title="Функция получения подписи кнопки смены языка" alt="" coords="331,357,495,383"/>
+<area shape="rect" href="dialogs_8h.html#add8ec8cb6a7fbfb070fe37ea991a8a0d" title="Функция получения диалога смены языка" alt="" coords="338,407,487,432"/>
+<area shape="rect" href="cursovaya_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в приложение" alt="" coords="5,205,56,231"/>
+<area shape="rect" href="cursovaya_8cpp.html#afb712dc6852069deebdc10280e811305" title="Функция получения клавиатуры для выбора языка" alt="" coords="108,357,279,383"/>
+<area shape="rect" href="cursovaya_8cpp.html#aaab5e40c5651939de700fd45f93f39f1" title="Процедура смены языка пользовательского интерфейса бота" alt="" coords="133,407,253,432"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae0dd2973b142354c451f4179e13600ea" name="ae0dd2973b142354c451f4179e13600ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0dd2973b142354c451f4179e13600ea">&#9670;&#160;</a></span>initialDialogs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void initialDialogs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Процедура инициализации диалогов </p>
+<p>Считывает диалоги из JSON файла <b>filenameDialogs</b> и сохраняет их в словарь. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogs_8h_source.html">dialogs.h</a> строка <a class="el" href="dialogs_8h_source.html#l00037">37</a></p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="dialogs_8h_ae0dd2973b142354c451f4179e13600ea_icgraph.png" border="0" usemap="#adialogs_8h_ae0dd2973b142354c451f4179e13600ea_icgraph" alt=""/></div>
+<map name="adialogs_8h_ae0dd2973b142354c451f4179e13600ea_icgraph" id="adialogs_8h_ae0dd2973b142354c451f4179e13600ea_icgraph">
+<area shape="rect" title="Процедура инициализации диалогов" alt="" coords="104,5,199,31"/>
+<area shape="rect" href="cursovaya_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в приложение" alt="" coords="5,5,56,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aceddf3376fac8a9ad9c1e7f72be6d818" name="aceddf3376fac8a9ad9c1e7f72be6d818"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aceddf3376fac8a9ad9c1e7f72be6d818">&#9670;&#160;</a></span>selectLanguage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string selectLanguage </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json&#160;</td>
+          <td class="paramname"><em>dialog</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>language</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция получения диалога </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dialog</td><td>Диалог (объект класса <b>nlohmann::json</b>, хранящий диалог на разных языках) </td></tr>
+    <tr><td class="paramname">language</td><td>Язык диалога </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка с диалогом</dd></dl>
+<p>Возвращает диалог на языке <b>language</b>. Если диалога на этом языке нет, то возвращает диалог на языке <b>baseLanguage</b>. Если диалога на языке <b>baseLanguage</b> нет, то возвращает пустую строку. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogs_8h_source.html">dialogs.h</a> строка <a class="el" href="dialogs_8h_source.html#l00053">53</a></p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="dialogs_8h_aceddf3376fac8a9ad9c1e7f72be6d818_icgraph.png" border="0" usemap="#adialogs_8h_aceddf3376fac8a9ad9c1e7f72be6d818_icgraph" alt=""/></div>
+<map name="adialogs_8h_aceddf3376fac8a9ad9c1e7f72be6d818_icgraph" id="adialogs_8h_aceddf3376fac8a9ad9c1e7f72be6d818_icgraph">
+<area shape="rect" title="Функция получения диалога" alt="" coords="667,208,780,233"/>
+<area shape="rect" href="dialogs_8h.html#aa61017178f7b6622a86a4889335ff700" title="Функция получения диалога" alt="" coords="543,208,619,233"/>
+<area shape="rect" href="dialogs_8h.html#a60709d434b7d5534c1ab08ecffbd7661" title="Функция получения текста ошибки отсутствия истории запросов" alt="" coords="112,5,275,31"/>
+<area shape="rect" href="dialogs_8h.html#ac5d0a556a84f6f0fdd486463c35155b5" title="Функция получения текста ошибки отсутствия фото" alt="" coords="126,56,261,81"/>
+<area shape="rect" href="dialogs_8h.html#a587d6340f84849a7cb09cace3f97cc44" title="Функция получения текста ошибки прывышения количества фотографий" alt="" coords="104,105,283,131"/>
+<area shape="rect" href="dialogs_8h.html#a559f5a14ccb81f21075b5b7294bcfd1c" title="Функция получения диалога приветствия" alt="" coords="141,155,246,180"/>
+<area shape="rect" href="dialogs_8h.html#aae6622f674c2934dd48b08328391a3c3" title="Функция получения текста справки" alt="" coords="371,208,454,233"/>
+<area shape="rect" href="dialogs_8h.html#a87607e98dcf23cff0bed92b7efe39465" title="Функция получения текста подсказки" alt="" coords="373,257,452,283"/>
+<area shape="rect" href="dialogs_8h.html#a475efb530cfaab87a4718869cca8639e" title="Функция получения информации о боте" alt="" coords="375,307,451,332"/>
+<area shape="rect" href="dialogs_8h.html#abccf0729d4972f706dce48b73d3b2b6a" title="Функция получения подписи кнопки смены языка" alt="" coords="331,357,495,383"/>
+<area shape="rect" href="dialogs_8h.html#add8ec8cb6a7fbfb070fe37ea991a8a0d" title="Функция получения диалога смены языка" alt="" coords="338,407,487,432"/>
+<area shape="rect" href="cursovaya_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в приложение" alt="" coords="5,205,56,231"/>
+<area shape="rect" href="cursovaya_8cpp.html#afb712dc6852069deebdc10280e811305" title="Функция получения клавиатуры для выбора языка" alt="" coords="108,357,279,383"/>
+<area shape="rect" href="cursovaya_8cpp.html#aaab5e40c5651939de700fd45f93f39f1" title="Процедура смены языка пользовательского интерфейса бота" alt="" coords="133,407,253,432"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="aa1eb88d5cfcf1fd4b58ea598da26066e" name="aa1eb88d5cfcf1fd4b58ea598da26066e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1eb88d5cfcf1fd4b58ea598da26066e">&#9670;&#160;</a></span>baseLanguage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string baseLanguage = &quot;en&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Язык по умолчанию для диалогов </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogs_8h_source.html">dialogs.h</a> строка <a class="el" href="dialogs_8h_source.html#l00019">19</a></p>
+
+</div>
+</div>
+<a id="a88d645ff6939dcc1322d5bc71cc94c50" name="a88d645ff6939dcc1322d5bc71cc94c50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88d645ff6939dcc1322d5bc71cc94c50">&#9670;&#160;</a></span>dialogsJson</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nlohmann::json dialogsJson</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>JSON-объект, хранящий информацию о диалогах </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogs_8h_source.html">dialogs.h</a> строка <a class="el" href="dialogs_8h_source.html#l00016">16</a></p>
+
+</div>
+</div>
+<a id="abe498a0af564a6f2a59e103a8c83c705" name="abe498a0af564a6f2a59e103a8c83c705"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe498a0af564a6f2a59e103a8c83c705">&#9670;&#160;</a></span>ERROR_BLOCK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string ERROR_BLOCK = &quot;Error&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ключ для словаря ошибок </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogs_8h_source.html">dialogs.h</a> строка <a class="el" href="dialogs_8h_source.html#l00027">27</a></p>
+
+</div>
+</div>
+<a id="a59ed8a96a214e058b876a1191ba55b87" name="a59ed8a96a214e058b876a1191ba55b87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59ed8a96a214e058b876a1191ba55b87">&#9670;&#160;</a></span>ERROR_EMPTY_HISTORY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string ERROR_EMPTY_HISTORY = &quot;emptyHistory&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ключ для ошибки пустой истории </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogs_8h_source.html">dialogs.h</a> строка <a class="el" href="dialogs_8h_source.html#l00030">30</a></p>
+
+</div>
+</div>
+<a id="a94b77dbf703c2b2de8d862152039c378" name="a94b77dbf703c2b2de8d862152039c378"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94b77dbf703c2b2de8d862152039c378">&#9670;&#160;</a></span>ERROR_N0_PHOTO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string ERROR_N0_PHOTO = &quot;noPhoto&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ключ для ошибки отсутствия фото </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogs_8h_source.html">dialogs.h</a> строка <a class="el" href="dialogs_8h_source.html#l00028">28</a></p>
+
+</div>
+</div>
+<a id="aaf5b3f727795ce56baf643e78e5ccf8c" name="aaf5b3f727795ce56baf643e78e5ccf8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf5b3f727795ce56baf643e78e5ccf8c">&#9670;&#160;</a></span>ERROR_TOO_MANY_PHOTOS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string ERROR_TOO_MANY_PHOTOS = &quot;tooManyPhotos&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ключ для ошибки превышения количества фотографий </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogs_8h_source.html">dialogs.h</a> строка <a class="el" href="dialogs_8h_source.html#l00029">29</a></p>
+
+</div>
+</div>
+<a id="a5246e7c03cf7330b917ba4e1817ed6d2" name="a5246e7c03cf7330b917ba4e1817ed6d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5246e7c03cf7330b917ba4e1817ed6d2">&#9670;&#160;</a></span>filenameDialogs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string filenameDialogs = &quot;config/dialogs.json&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Путь к JSON файлу с диалогами </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogs_8h_source.html">dialogs.h</a> строка <a class="el" href="dialogs_8h_source.html#l00018">18</a></p>
+
+</div>
+</div>
+<a id="a25cc7b9dcf7721b7af7fd9bf57318bce" name="a25cc7b9dcf7721b7af7fd9bf57318bce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25cc7b9dcf7721b7af7fd9bf57318bce">&#9670;&#160;</a></span>GREETINGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string GREETINGS = &quot;greetings&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ключ для приветствия </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogs_8h_source.html">dialogs.h</a> строка <a class="el" href="dialogs_8h_source.html#l00021">21</a></p>
+
+</div>
+</div>
+<a id="a44bc41b3869f7d1b6eb3f1e052befcdc" name="a44bc41b3869f7d1b6eb3f1e052befcdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44bc41b3869f7d1b6eb3f1e052befcdc">&#9670;&#160;</a></span>HELP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string HELP = &quot;help&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ключ для справки </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogs_8h_source.html">dialogs.h</a> строка <a class="el" href="dialogs_8h_source.html#l00022">22</a></p>
+
+</div>
+</div>
+<a id="a8b4d2adc6096f5607758127768f713b3" name="a8b4d2adc6096f5607758127768f713b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b4d2adc6096f5607758127768f713b3">&#9670;&#160;</a></span>HINT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string HINT = &quot;hint&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ключ для подсказки </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogs_8h_source.html">dialogs.h</a> строка <a class="el" href="dialogs_8h_source.html#l00024">24</a></p>
+
+</div>
+</div>
+<a id="a64b820d804584a0d7f279b1a7bddfaeb" name="a64b820d804584a0d7f279b1a7bddfaeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64b820d804584a0d7f279b1a7bddfaeb">&#9670;&#160;</a></span>INFO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string INFO = &quot;info&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ключ для информации о боте </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogs_8h_source.html">dialogs.h</a> строка <a class="el" href="dialogs_8h_source.html#l00023">23</a></p>
+
+</div>
+</div>
+<a id="aa14a40c1eee12db0df90dd4bea0eba8e" name="aa14a40c1eee12db0df90dd4bea0eba8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa14a40c1eee12db0df90dd4bea0eba8e">&#9670;&#160;</a></span>LANGUAGES_BUTTONS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string LANGUAGES_BUTTONS = &quot;languagesButtons&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ключ для кнопок языков </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogs_8h_source.html">dialogs.h</a> строка <a class="el" href="dialogs_8h_source.html#l00026">26</a></p>
+
+</div>
+</div>
+<a id="a409144296296ae35168567c49a8c0e1a" name="a409144296296ae35168567c49a8c0e1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a409144296296ae35168567c49a8c0e1a">&#9670;&#160;</a></span>SELECT_LANGUAGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string SELECT_LANGUAGE = &quot;selectLanguage&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ключ для выбора языка </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogs_8h_source.html">dialogs.h</a> строка <a class="el" href="dialogs_8h_source.html#l00025">25</a></p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dialogs_8h.html">dialogs.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
+</body>
+</html>

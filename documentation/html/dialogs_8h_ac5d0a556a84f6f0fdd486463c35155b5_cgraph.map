@@ -1,0 +1,5 @@
+<map id="dialogErrorNoPhoto" name="dialogErrorNoPhoto">
+<area shape="rect" id="node1" title="Функция получения текста ошибки отсутствия фото" alt="" coords="5,5,140,31"/>
+<area shape="rect" id="node2" href="$dialogs_8h.html#aa61017178f7b6622a86a4889335ff700" title="Функция получения диалога" alt="" coords="188,5,264,31"/>
+<area shape="rect" id="node3" href="$dialogs_8h.html#aceddf3376fac8a9ad9c1e7f72be6d818" title="Функция получения диалога" alt="" coords="312,5,425,31"/>
+</map>

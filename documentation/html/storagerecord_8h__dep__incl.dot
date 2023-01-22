@@ -1,0 +1,14 @@
+digraph "storagerecord.h"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="storagerecord.h",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Файл класса записей хранилища пользовательских запросов"];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="storageuser.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$storageuser_8h.html",tooltip="Файл класса пользователей"];
+  Node2 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="localStorage.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$local_storage_8h.html",tooltip="Файл класса хранилища пользователей"];
+  Node3 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="cursovaya.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$cursovaya_8cpp.html",tooltip="Файл логики работы бота и обработки изображений"];
+}

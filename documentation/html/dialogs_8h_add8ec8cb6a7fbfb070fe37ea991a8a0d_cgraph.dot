@@ -1,0 +1,13 @@
+digraph "dialogSelectLanguage"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="dialogSelectLanguage",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Функция получения диалога смены языка"];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="getDialog",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$dialogs_8h.html#aa61017178f7b6622a86a4889335ff700",tooltip="Функция получения диалога"];
+  Node2 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="selectLanguage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$dialogs_8h.html#aceddf3376fac8a9ad9c1e7f72be6d818",tooltip="Функция получения диалога"];
+}

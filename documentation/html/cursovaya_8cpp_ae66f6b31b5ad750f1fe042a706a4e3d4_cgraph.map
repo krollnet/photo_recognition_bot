@@ -1,0 +1,26 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="Точка входа в приложение" alt="" coords="5,460,56,485"/>
+<area shape="rect" id="node2" href="$class_user.html#ac7ad8bba285cd87426890aa3a47aa1b7" title="Метод добавления записи" alt="" coords="130,5,249,31"/>
+<area shape="rect" id="node3" href="$cursovaya_8cpp.html#aaab5e40c5651939de700fd45f93f39f1" title="Процедура смены языка пользовательского интерфейса бота" alt="" coords="129,55,249,80"/>
+<area shape="rect" id="node7" href="$class_user_storage.html#a517d664566fb7190ce95e1b5688851ed" title="Метод получения экземпляра класса&#45;одиночки UserStorage" alt="" coords="337,105,487,131"/>
+<area shape="rect" id="node8" href="$class_user.html#ae0c649a678270d65613b2f739dca1c32" title="Количество запросов в истории пользователя" alt="" coords="121,156,258,181"/>
+<area shape="rect" id="node9" href="$dialogs_8h.html#a60709d434b7d5534c1ab08ecffbd7661" title="Функция получения текста ошибки отсутствия истории запросов" alt="" coords="331,207,493,232"/>
+<area shape="rect" id="node10" href="$dialogs_8h.html#ac5d0a556a84f6f0fdd486463c35155b5" title="Функция получения текста ошибки отсутствия фото" alt="" coords="345,257,479,283"/>
+<area shape="rect" id="node11" href="$dialogs_8h.html#a587d6340f84849a7cb09cace3f97cc44" title="Функция получения текста ошибки прывышения количества фотографий" alt="" coords="323,308,501,333"/>
+<area shape="rect" id="node12" href="$dialogs_8h.html#a559f5a14ccb81f21075b5b7294bcfd1c" title="Функция получения диалога приветствия" alt="" coords="359,359,465,384"/>
+<area shape="rect" id="node13" href="$dialogs_8h.html#aae6622f674c2934dd48b08328391a3c3" title="Функция получения текста справки" alt="" coords="371,408,453,433"/>
+<area shape="rect" id="node14" href="$dialogs_8h.html#a87607e98dcf23cff0bed92b7efe39465" title="Функция получения текста подсказки" alt="" coords="373,459,451,484"/>
+<area shape="rect" id="node15" href="$dialogs_8h.html#a475efb530cfaab87a4718869cca8639e" title="Функция получения информации о боте" alt="" coords="374,509,450,535"/>
+<area shape="rect" id="node16" href="$cursovaya_8cpp.html#ab208a764a527ab13fd0c8a1a323727b1" title="Процедура высвобождения памяти, занятой tesseractApi" alt="" coords="139,561,239,587"/>
+<area shape="rect" id="node17" href="$class_user.html#abc59393d99ed212da3c193cd4d5be1da" title="Метод получения истории запросов" alt="" coords="128,611,251,636"/>
+<area shape="rect" id="node18" href="$cursovaya_8cpp.html#afb712dc6852069deebdc10280e811305" title="Функция получения клавиатуры для выбора языка" alt="" coords="104,660,275,685"/>
+<area shape="rect" id="node20" href="$cursovaya_8cpp.html#ada2ffbb1419621e1b3bfe18b3fbe748c" title="Функция получения токена для Telegram API." alt="" coords="152,709,227,735"/>
+<area shape="rect" id="node21" href="$dialogs_8h.html#ae0dd2973b142354c451f4179e13600ea" title="Процедура инициализации диалогов" alt="" coords="142,759,237,784"/>
+<area shape="rect" id="node22" href="$cursovaya_8cpp.html#a928c7d0bdbe6eea908386a99e384dd99" title="Процедура инициализации tesseractApi" alt="" coords="135,808,244,833"/>
+<area shape="rect" id="node23" href="$class_user.html#ae7a1935b898dc85a8800537896094fdd" title="Метод проверки превышения количества запросов на распознование текста" alt="" coords="118,857,261,883"/>
+<area shape="rect" id="node24" href="$cursovaya_8cpp.html#a402e1429ddec10958e677ac812858088" title="Функция распознавания текста на изображении по объекту изображения" alt="" coords="138,907,241,932"/>
+<area shape="rect" id="node4" href="$dialogs_8h.html#add8ec8cb6a7fbfb070fe37ea991a8a0d" title="Функция получения диалога смены языка" alt="" coords="337,56,487,81"/>
+<area shape="rect" id="node5" href="$dialogs_8h.html#aa61017178f7b6622a86a4889335ff700" title="Функция получения диалога" alt="" coords="549,359,625,384"/>
+<area shape="rect" id="node6" href="$dialogs_8h.html#aceddf3376fac8a9ad9c1e7f72be6d818" title="Функция получения диалога" alt="" coords="673,359,787,384"/>
+<area shape="rect" id="node19" href="$dialogs_8h.html#abccf0729d4972f706dce48b73d3b2b6a" title="Функция получения подписи кнопки смены языка" alt="" coords="330,611,494,636"/>
+</map>

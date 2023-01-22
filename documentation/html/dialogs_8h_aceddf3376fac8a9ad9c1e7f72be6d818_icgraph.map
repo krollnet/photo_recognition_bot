@@ -1,0 +1,16 @@
+<map id="selectLanguage" name="selectLanguage">
+<area shape="rect" id="node1" title="Функция получения диалога" alt="" coords="667,208,780,233"/>
+<area shape="rect" id="node2" href="$dialogs_8h.html#aa61017178f7b6622a86a4889335ff700" title="Функция получения диалога" alt="" coords="543,208,619,233"/>
+<area shape="rect" id="node3" href="$dialogs_8h.html#a60709d434b7d5534c1ab08ecffbd7661" title="Функция получения текста ошибки отсутствия истории запросов" alt="" coords="112,5,275,31"/>
+<area shape="rect" id="node5" href="$dialogs_8h.html#ac5d0a556a84f6f0fdd486463c35155b5" title="Функция получения текста ошибки отсутствия фото" alt="" coords="126,56,261,81"/>
+<area shape="rect" id="node6" href="$dialogs_8h.html#a587d6340f84849a7cb09cace3f97cc44" title="Функция получения текста ошибки прывышения количества фотографий" alt="" coords="104,105,283,131"/>
+<area shape="rect" id="node7" href="$dialogs_8h.html#a559f5a14ccb81f21075b5b7294bcfd1c" title="Функция получения диалога приветствия" alt="" coords="141,155,246,180"/>
+<area shape="rect" id="node8" href="$dialogs_8h.html#aae6622f674c2934dd48b08328391a3c3" title="Функция получения текста справки" alt="" coords="371,208,454,233"/>
+<area shape="rect" id="node9" href="$dialogs_8h.html#a87607e98dcf23cff0bed92b7efe39465" title="Функция получения текста подсказки" alt="" coords="373,257,452,283"/>
+<area shape="rect" id="node10" href="$dialogs_8h.html#a475efb530cfaab87a4718869cca8639e" title="Функция получения информации о боте" alt="" coords="375,307,451,332"/>
+<area shape="rect" id="node11" href="$dialogs_8h.html#abccf0729d4972f706dce48b73d3b2b6a" title="Функция получения подписи кнопки смены языка" alt="" coords="331,357,495,383"/>
+<area shape="rect" id="node13" href="$dialogs_8h.html#add8ec8cb6a7fbfb070fe37ea991a8a0d" title="Функция получения диалога смены языка" alt="" coords="338,407,487,432"/>
+<area shape="rect" id="node4" href="$cursovaya_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в приложение" alt="" coords="5,205,56,231"/>
+<area shape="rect" id="node12" href="$cursovaya_8cpp.html#afb712dc6852069deebdc10280e811305" title="Функция получения клавиатуры для выбора языка" alt="" coords="108,357,279,383"/>
+<area shape="rect" id="node14" href="$cursovaya_8cpp.html#aaab5e40c5651939de700fd45f93f39f1" title="Процедура смены языка пользовательского интерфейса бота" alt="" coords="133,407,253,432"/>
+</map>
