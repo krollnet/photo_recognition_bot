@@ -1,4 +1,5 @@
-﻿
+﻿// cursovaya.cpp: определяет точку входа для приложения.
+//
 #pragma warning(disable :5045)
 
 #include "cursovaya.h"
@@ -7,7 +8,7 @@
 
 /*!
     @file
-    @brief Файл логики работы бота и обработки изображений
+    @brief Файл класса пользователей
     @author Фонова Полина Викторовна
     @version 1.0
     @date Январь 2023 года
@@ -58,6 +59,22 @@ void changeLanguage(TgBot::Bot& bot, TgBot::Message::Ptr message);
 */
 TgBot::ReplyKeyboardMarkup::Ptr getReplyKeyboardMarkup();
 
+/*!
+    @param bot Ссылка на объект бота
+    @brief Функция отправки сообщения пользователю
+	@param chatId Идентификатор чата
+	@param text Текст сообщения
+	@param replyToMessageId Идентификатор сообщения, на которое отвечает бот (по умолчанию 0 - нет такого сообщения)
+	@param keyboard Указатель на объект клавиатуры (nullptr по умолчанию)
+*/
+void sendMessage(
+    const TgBot::Bot& bot,
+    std::int64_t chatId,
+    const std::string& text,
+    std::int32_t replyToMessageId = 0,
+    TgBot::ReplyKeyboardMarkup::Ptr keyboard = nullptr
+);
+
 tesseract::TessBaseAPI* tesseractApi = nullptr;                         //!< Объект **tesseractApi** для распознавания текста на изображении
 TgBot::ReplyKeyboardMarkup::Ptr keyboard = nullptr;                     //!< Объект клавиатуры для выбора языка
 std::shared_ptr<TgBot::ReplyKeyboardRemove> removeKeyboard = nullptr;   //!< Объект для удаления клавиатуры
@@ -66,6 +83,7 @@ std::shared_ptr<TgBot::ReplyKeyboardRemove> removeKeyboard = nullptr;   //!< О�
 	@brief Множество комманд бота
 */
 std::set<std::string> commands = { "/start", "/help", "/info", "/lang", "/history"};
+
 /*!
     @brief Список поддерживаемых языков интерфейса
 */
@@ -83,23 +101,23 @@ int main() {
 
     bot.getEvents().onCommand("start", [&bot](TgBot::Message::Ptr message) {
         std::string currentLanguage = UserStorage::Instance()[message->chat->id]->language;
-	    bot.getApi().sendMessage(message->chat->id, dialogGreeting(currentLanguage));
+	    sendMessage(bot, message->chat->id, dialogGreeting(currentLanguage));
         changeLanguage(bot, message);
     });
     bot.getEvents().onCommand("help", [&bot](TgBot::Message::Ptr message) {
 		std::string currentLanguage = UserStorage::Instance()[message->chat->id]->language;
-        bot.getApi().sendMessage(message->chat->id, dialogHelp(currentLanguage));
+        sendMessage(bot, message->chat->id, dialogHelp(currentLanguage));
     });
     bot.getEvents().onCommand("info", [&bot](TgBot::Message::Ptr message) {
         std::string currentLanguage = UserStorage::Instance()[message->chat->id]->language;
-        bot.getApi().sendMessage(message->chat->id, dialogInfo(currentLanguage));
-        bot.getApi().sendMessage(message->chat->id, dialogHint(currentLanguage));
+        sendMessage(bot, message->chat->id, dialogInfo(currentLanguage));
+        sendMessage(bot, message->chat->id, dialogHint(currentLanguage));
     });
     bot.getEvents().onCommand("history", [&bot](TgBot::Message::Ptr message) {
         User* user = UserStorage::Instance()[message->chat->id];
         std::string currentLanguage = user->language;
         if (user->countRecords() == 0) {
-            bot.getApi().sendMessage(message->chat->id, dialogErrorEmptyHistory(currentLanguage));
+            sendMessage(bot, message->chat->id, dialogErrorEmptyHistory(currentLanguage));
         }
         else {
             for (auto& record : user->getRecords()) {
@@ -107,7 +125,7 @@ int main() {
                 date::sys_seconds tp{ std::chrono::seconds{record->getDateMessage()}};
                 text += date::format("%Y-%m-%d %I:%M:%S %p", tp) + " GMT+0\n\n";
                 text += record->getResult();
-                bot.getApi().sendMessage(message->chat->id, text);
+                sendMessage(bot, message->chat->id, text);
             }
         }
     });
@@ -124,8 +142,8 @@ int main() {
             std::string newLanguage = message->text.substr(6, 2);
             if (std::find(languages.begin(), languages.end(), newLanguage) != languages.end()) {
 				UserStorage::Instance()[message->chat->id]->language = newLanguage;
-                bot.getApi().sendMessage(message->chat->id, dialogInfo(newLanguage));
-                bot.getApi().sendMessage(message->chat->id, dialogHint(newLanguage));
+                sendMessage(bot, message->chat->id, dialogInfo(newLanguage));
+                sendMessage(bot, message->chat->id, dialogHint(newLanguage));
             }
             else {
                 changeLanguage(bot, message);
@@ -138,11 +156,11 @@ int main() {
 			}
 		}
 		if (message->photo.empty()) {
-			bot.getApi().sendMessage(message->chat->id, dialogErrorNoPhoto(currentLanguage));
+            sendMessage(bot, message->chat->id, dialogErrorNoPhoto(currentLanguage));
 			return;
 		}
         if (user->isLimitRecords()) {
-            bot.getApi().sendMessage(message->chat->id, dialogErrorTooManyPhotos(currentLanguage));
+            sendMessage(bot, message->chat->id, dialogErrorTooManyPhotos(currentLanguage));
             return;
         }
         
@@ -156,14 +174,9 @@ int main() {
         //std::string text = ocrImageFile(filename);
         std::string text = ocrImageData(imageData);
         user->addRecord(text, fileId, filePath, message->date);
+		sendMessage(bot, message->chat->id, text, message->messageId);
+        sendMessage(bot, message->chat->id, dialogHint(currentLanguage));
 
-        try {
-            bot.getApi().sendMessage(message->chat->id, text, false, message->messageId);
-        }
-        catch (TgBot::TgException& ) {
-            bot.getApi().sendMessage(message->chat->id, text);
-        }
-        bot.getApi().sendMessage(message->chat->id, dialogHint(currentLanguage));
         printf("Time taken: %.2fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
     });
     try {
@@ -179,8 +192,32 @@ int main() {
     catch (TgBot::TgException& e) {
         printf("error: %s\n", e.what());
     }
-	
     return 0;
+}
+
+void sendMessage(
+    const TgBot::Bot& bot,
+    std::int64_t chatId,
+    const std::string& text,
+    std::int32_t replyToMessageId,
+    TgBot::ReplyKeyboardMarkup::Ptr keyboard
+) {
+    try {
+        try {
+            bot.getApi().sendMessage(chatId, text, false, replyToMessageId, keyboard);
+        }
+        catch (TgBot::TgException& e) {
+            if (replyToMessageId != 0) {
+				bot.getApi().sendMessage(chatId, text, false, 0, keyboard);
+			}
+			else {
+				throw e;
+            }
+        }
+    }
+	catch (TgBot::TgException& e) {
+        printf("error: %s\n", e.what());
+	}
 }
 
 std::string getToken() {
@@ -241,5 +278,5 @@ TgBot::ReplyKeyboardMarkup::Ptr getReplyKeyboardMarkup() {
 
 void changeLanguage(TgBot::Bot& bot, TgBot::Message::Ptr message) {
     std::string currentLanguage = UserStorage::Instance()[message->chat->id]->language;
-    bot.getApi().sendMessage(message->chat->id, dialogSelectLanguage(currentLanguage), false, 0, keyboard, "Markdown");
+    sendMessage(bot, message->chat->id, dialogSelectLanguage(currentLanguage), 0, keyboard);
 }
